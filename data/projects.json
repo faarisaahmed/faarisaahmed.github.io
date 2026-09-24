@@ -3,13 +3,13 @@
     "login": "faarisaahmed",
     "name": "Faaris Ahmed",
     "bio": "i like coding :)",
-    "location": "Brooklyn, NY",
+    "location": "New Jersey",
     "url": "https://github.com/faarisaahmed",
     "followers": 9,
     "since": "2022-01-17T15:49:39Z"
   },
   "about": [
-    "Hey, I'm Faaris. I like coding :) I'm based in Brooklyn, and pretty much everything I make ends up on this site.",
+    "Hey, I'm Faaris. I like coding :) I'm based in New Jersey, and pretty much everything I make ends up on this site.",
     "I build all kinds of things: games that run in the browser (a dragon flight sim, and Super Mario Bros from scratch with an AI that learned to play it), small web tools that work entirely in the page, autonomous trading agents that compete on paper accounts, and a stack of mods for Hollow Knight: Silksong.",
     "It's all open source. Browse the projects to read about each one, or go straight to the live sites and try them."
   ],

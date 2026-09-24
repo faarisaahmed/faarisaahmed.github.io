@@ -129,7 +129,7 @@ def main():
             "login": profile["login"],
             "name": profile.get("name") or profile["login"],
             "bio": profile.get("bio") or "",
-            "location": profile.get("location") or "",
+            "location": CONFIG.get("location") or profile.get("location") or "",
             "url": profile["html_url"],
             "followers": profile["followers"],
             "since": profile["created_at"],
