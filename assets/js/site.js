@@ -61,16 +61,39 @@
   const all = () => [...byName.values()];
 
   /* ---------- Scrolling ---------- */
-  // One helper for every programmatic scroll so nothing fights over the viewport.
+  // Programmatic scrolls are animated by hand so they can be dropped the instant the user
+  // touches the wheel, trackpad, keyboard or screen. The user always wins.
+  let anim = null;
+  let userScrolled = false;
+  const cancelScroll = () => {
+    userScrolled = true;
+    if (!anim) return;
+    cancelAnimationFrame(anim.raf);
+    const done = anim.resolve;
+    anim = null;
+    done();
+  };
+  for (const ev of ["wheel", "touchstart", "keydown", "pointerdown"]) addEventListener(ev, cancelScroll, { passive: true, capture: true });
+  const isAutoScrolling = () => anim !== null;
+
   function scrollToY(y) {
+    if (anim) { cancelAnimationFrame(anim.raf); anim.resolve(); anim = null; }
+    const target = Math.max(0, Math.min(y, document.documentElement.scrollHeight - innerHeight));
+    const start = scrollY;
+    const dist = target - start;
+    if (reduceMotion || Math.abs(dist) < 2) { scrollTo(0, target); return Promise.resolve(); }
+    const dur = Math.min(650, 250 + Math.abs(dist) * 0.12);
+    const t0 = performance.now();
     return new Promise((resolve) => {
-      const target = Math.max(0, Math.min(y, document.documentElement.scrollHeight - innerHeight));
-      if (Math.abs(scrollY - target) < 2) return resolve();
-      let done = false;
-      const finish = () => { if (!done) { done = true; removeEventListener("scrollend", finish); resolve(); } };
-      addEventListener("scrollend", finish, { once: true });
-      setTimeout(finish, 1200);
-      scrollTo({ top: target, behavior });
+      anim = { resolve, raf: 0 };
+      const step = (now) => {
+        if (!anim) return;
+        const t = Math.min(1, (now - t0) / dur);
+        scrollTo(0, start + dist * (1 - Math.pow(1 - t, 3)));
+        if (t < 1) anim.raf = requestAnimationFrame(step);
+        else { anim = null; resolve(); }
+      };
+      anim.raf = requestAnimationFrame(step);
     });
   }
 
@@ -298,7 +321,6 @@
     const chips = $$(".chip");
     const sections = $$(".group");
     const offset = () => $(".site-nav").offsetHeight + bar.offsetHeight + 12;
-    let lock = false;
 
     const setActive = (id) => {
       for (const c of chips) {
@@ -314,7 +336,7 @@
 
     const spy = () => {
       bar.classList.toggle("stuck", bar.getBoundingClientRect().top <= $(".site-nav").offsetHeight + 1);
-      if (lock) return;
+      if (isAutoScrolling()) return; // keep the clicked chip lit while we travel to it
       const line = offset() + 40;
       let current = null;
       const visible = sections.filter((s) => !s.hidden);
@@ -322,19 +344,22 @@
       if (innerHeight + scrollY >= document.documentElement.scrollHeight - 4 && visible.length) current = visible.at(-1).id;
       setActive(current);
     };
-    addEventListener("scroll", spy, { passive: true });
+    let spyQueued = false;
+    addEventListener("scroll", () => {
+      if (spyQueued) return;
+      spyQueued = true;
+      requestAnimationFrame(() => { spyQueued = false; spy(); });
+    }, { passive: true });
     addEventListener("resize", spy, { passive: true });
 
     const goTo = async (id, instant = false) => {
       const sec = document.getElementById(id);
       if (!sec || sec.hidden) return;
       const y = sec.getBoundingClientRect().top + scrollY - offset() + 1;
-      lock = true;
       setActive(id);
       history.replaceState(null, "", `#${id}`);
-      if (instant) scrollTo({ top: y, behavior: "auto" });
+      if (instant) scrollTo(0, y);
       else await scrollToY(y);
-      lock = false;
       spy();
     };
 
@@ -387,18 +412,14 @@
     reveal();
     spy();
 
-    addEventListener("hashchange", () => {
-      const id = location.hash.slice(1);
-      if (document.getElementById(id)?.classList.contains("group")) goTo(id, true);
-    });
-
     // Arriving from a link like /projects/#games: content was rendered after load, so jump now.
     const id = location.hash.slice(1);
     if (id && !id.startsWith("/") && document.getElementById(id)?.classList.contains("group")) {
       $$(".in-view").forEach((el) => el.classList.remove("in-view"));
       requestAnimationFrame(() => goTo(id, true));
       // The browser's own fragment scroll can land after ours (it retries until load), so correct once more.
-      if (document.readyState !== "complete") addEventListener("load", () => goTo(id, true), { once: true });
+      // Skipped if the user has already started scrolling.
+      if (document.readyState !== "complete") addEventListener("load", () => { if (!userScrolled) goTo(id, true); }, { once: true });
     }
   }
 
