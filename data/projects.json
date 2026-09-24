@@ -1,0 +1,757 @@
+{
+  "profile": {
+    "login": "faarisaahmed",
+    "name": "Faaris Ahmed",
+    "bio": "i like coding :)",
+    "location": "Brooklyn, NY",
+    "url": "https://github.com/faarisaahmed",
+    "followers": 9
+  },
+  "groups": [
+    {
+      "id": "silksong",
+      "title": "Silksong Mods",
+      "blurb": "Mods, multiplayer addons and modding tools for Hollow Knight: Silksong.",
+      "accent": "#9db7e0",
+      "icon": "mask",
+      "projects": [
+        {
+          "name": "Beastfly",
+          "title": "Beastfly",
+          "tagline": "A cross-platform terminal mod manager for Silksong: Steam, GOG, Xbox, Epic, Wine and Proton",
+          "description": "A CLI mod manager for Hollow Knight: Silksong",
+          "tags": [
+            "Mod manager",
+            "CLI"
+          ],
+          "url": "https://github.com/faarisaahmed/Beastfly",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "Python",
+          "stars": 1,
+          "forks": 0,
+          "created": "2026-09-01T15:31:20Z",
+          "pushed": "2026-09-18T21:03:45Z",
+          "branch": "main",
+          "release": {
+            "tag": "v0.1.1",
+            "url": "https://github.com/faarisaahmed/Beastfly/releases/tag/v0.1.1"
+          },
+          "readme": true
+        },
+        {
+          "name": "SilksongPantheons",
+          "title": "Silksong Pantheons",
+          "tagline": "Hollow Knight's Godhome pantheons, rebuilt around Silksong's own bosses",
+          "description": "Hollow Knight's Godhome in Silksong, fought against Silksong's own bosses",
+          "tags": [
+            "Boss rush"
+          ],
+          "url": "https://github.com/faarisaahmed/SilksongPantheons",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-10T00:07:42Z",
+          "pushed": "2026-09-20T15:13:27Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "AdaptiveEnemies",
+          "title": "Adaptive Enemies",
+          "tagline": "Enemies learn how you fight, and they share what they learn",
+          "description": "A mod for Hollow Knight: Silksong where enemies learn how you fight and share what they learn.",
+          "tags": [
+            "Gameplay"
+          ],
+          "url": "https://github.com/faarisaahmed/AdaptiveEnemies",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-08-25T17:16:08Z",
+          "pushed": "2026-08-25T17:17:14Z",
+          "branch": "main",
+          "release": {
+            "tag": "v1.0.0",
+            "url": "https://github.com/faarisaahmed/AdaptiveEnemies/releases/tag/v1.0.0"
+          },
+          "readme": true
+        },
+        {
+          "name": "GauntletMod",
+          "title": "Gauntlet Mod",
+          "tagline": "Build your own custom enemy gauntlets",
+          "description": "A mod for Hollow Knight: Silksong that allows custom gauntlet creation.",
+          "tags": [
+            "Gameplay"
+          ],
+          "url": "https://github.com/faarisaahmed/GauntletMod",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 1,
+          "forks": 0,
+          "created": "2026-08-22T11:23:01Z",
+          "pushed": "2026-09-18T21:03:37Z",
+          "branch": "main",
+          "release": {
+            "tag": "v1.0.0",
+            "url": "https://github.com/faarisaahmed/GauntletMod/releases/tag/v1.0.0"
+          },
+          "readme": true
+        },
+        {
+          "name": "silksong-spawn-enemy-on-hit",
+          "title": "Spawn Enemy on Hit",
+          "tagline": "Every hit you take summons an enemy you've already met",
+          "description": "Silksong challenge mod: every hit summons an enemy you have already met, so the more of Pharloom you explore the deadlier your own mistakes become.",
+          "tags": [
+            "Challenge"
+          ],
+          "url": "https://github.com/faarisaahmed/silksong-spawn-enemy-on-hit",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-16T22:21:28Z",
+          "pushed": "2026-09-18T21:11:40Z",
+          "branch": "main",
+          "release": {
+            "tag": "v1.0.1",
+            "url": "https://github.com/faarisaahmed/silksong-spawn-enemy-on-hit/releases/tag/v1.0.1"
+          },
+          "readme": true
+        },
+        {
+          "name": "SSMPEnemySync",
+          "title": "SSMP Enemy Sync",
+          "tagline": "Shared enemies for Silksong multiplayer: one enemy, one health pool, bosses included",
+          "description": "SSMP addon that makes Silksong enemies shared between both players: one enemy, one health pool, hit by either player. Bosses included.",
+          "tags": [
+            "Multiplayer"
+          ],
+          "url": "https://github.com/faarisaahmed/SSMPEnemySync",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-13T16:23:19Z",
+          "pushed": "2026-09-18T21:11:43Z",
+          "branch": "main",
+          "release": {
+            "tag": "v0.1.0",
+            "url": "https://github.com/faarisaahmed/SSMPEnemySync/releases/tag/v0.1.0"
+          },
+          "readme": true
+        },
+        {
+          "name": "ssmp-enemy-puppet",
+          "title": "SSMP Enemy Puppet",
+          "tagline": "Both players take control of enemies and fight each other with them",
+          "description": "SSMP addon: both players take control of enemies and fight each other with them. Built on SSMPEnemySync + Enemy Behavior API.",
+          "tags": [
+            "Multiplayer"
+          ],
+          "url": "https://github.com/faarisaahmed/ssmp-enemy-puppet",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-13T16:39:08Z",
+          "pushed": "2026-09-18T21:11:41Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "enemy-behavior-api",
+          "title": "Enemy Behavior API",
+          "tagline": "Reads the PlayMaker FSMs and exposes every enemy's attacks and movement as a structured schema",
+          "description": "Generic enemy behaviour discovery API for Hollow Knight: Silksong (BepInEx). Reflects over PlayMaker FSMs to expose attacks and movement as a structured schema. In development.",
+          "tags": [
+            "API",
+            "In development"
+          ],
+          "url": "https://github.com/faarisaahmed/enemy-behavior-api",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-12T17:58:20Z",
+          "pushed": "2026-09-18T21:11:35Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "enemy-puppeteer",
+          "title": "Enemy Puppeteer",
+          "tagline": "Click an enemy, fire its attacks, steer it with the arrow keys",
+          "description": "Experimental rig for hand-driving Silksong enemies through the Enemy Behavior API - click an enemy, fire its attacks, steer it with arrow keys.",
+          "tags": [
+            "Experimental"
+          ],
+          "url": "https://github.com/faarisaahmed/enemy-puppeteer",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-12T18:22:45Z",
+          "pushed": "2026-09-18T21:11:37Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "SilksongGodhome",
+          "title": "Silksong Godhome",
+          "tagline": "An experimental port of Hollow Knight's Godhome into Silksong",
+          "description": "EXPERIMENTAL work in progress: porting Hollow Knight's Godhome into Silksong. Ships no HK assets - you regenerate them from your own copy.",
+          "tags": [
+            "Experimental"
+          ],
+          "url": "https://github.com/faarisaahmed/SilksongGodhome",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-09T09:57:23Z",
+          "pushed": "2026-09-18T21:11:31Z",
+          "branch": "main",
+          "release": {
+            "tag": "v0.1.0-final",
+            "url": "https://github.com/faarisaahmed/SilksongGodhome/releases/tag/v0.1.0-final"
+          },
+          "readme": true
+        }
+      ]
+    },
+    {
+      "id": "games",
+      "title": "Games",
+      "blurb": "Things you can actually play, most of them right in your browser.",
+      "accent": "#e6b58a",
+      "icon": "gamepad",
+      "projects": [
+        {
+          "name": "toothless-sim-remaster",
+          "title": "Dragon Flight Sim",
+          "tagline": "Fly a dragon across an open archipelago, a heavily upgraded remaster of the original",
+          "description": "A heavily upgraded version of the old toothless simulator from before",
+          "tags": [
+            "3D",
+            "Browser"
+          ],
+          "url": "https://github.com/faarisaahmed/toothless-sim-remaster",
+          "live": "https://faarisaahmed.github.io/toothless-sim-remaster/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "JavaScript",
+          "stars": 1,
+          "forks": 0,
+          "created": "2026-07-28T21:12:20Z",
+          "pushed": "2026-09-18T21:04:18Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "hide-and-go-seek",
+          "title": "Hide and Go Seek",
+          "tagline": "Real-time multiplayer hide-and-seek, played across a house",
+          "description": "",
+          "tags": [
+            "Multiplayer"
+          ],
+          "url": "https://github.com/faarisaahmed/hide-and-go-seek",
+          "live": "https://faarisaahmed.github.io/hide-and-go-seek/",
+          "liveLabel": "About page",
+          "links": [
+            {
+              "label": "Play",
+              "url": "https://hide-and-go-seek.onrender.com",
+              "primary": true
+            }
+          ],
+          "language": "Python",
+          "stars": 1,
+          "forks": 0,
+          "created": "2026-02-28T20:19:33Z",
+          "pushed": "2026-09-18T21:04:26Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "super-mario-bros-rl-model",
+          "title": "Super Mario Bros + RL",
+          "tagline": "Super Mario Bros rebuilt from scratch in Python, plus a PPO agent trained to speedrun 1-1",
+          "description": "Super Mario Bros from the NES RL Model",
+          "tags": [
+            "Reinforcement learning"
+          ],
+          "url": "https://github.com/faarisaahmed/super-mario-bros-rl-model",
+          "live": "https://faarisaahmed.github.io/super-mario-bros-rl-model/",
+          "liveLabel": "Play",
+          "links": [],
+          "language": "Python",
+          "stars": 1,
+          "forks": 0,
+          "created": "2026-02-15T19:36:47Z",
+          "pushed": "2026-09-18T21:04:39Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "Snake-Python",
+          "title": "Snake",
+          "tagline": "The classic, written in Python",
+          "description": "Snake game in python",
+          "tags": [
+            "Classic"
+          ],
+          "url": "https://github.com/faarisaahmed/Snake-Python",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "Python",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-01-31T01:10:49Z",
+          "pushed": "2026-01-31T01:15:07Z",
+          "branch": "main",
+          "release": null,
+          "readme": false
+        }
+      ]
+    },
+    {
+      "id": "web",
+      "title": "Web Apps",
+      "blurb": "Tools and sites that run in the browser. Most need nothing installed.",
+      "accent": "#8fd3c1",
+      "icon": "globe",
+      "projects": [
+        {
+          "name": "object-tracker",
+          "title": "Object Tracker",
+          "tagline": "Reframe video to any aspect ratio by keyframing where the subject is, all in one HTML file",
+          "description": "Reframe video to a different aspect ratio by keyframing where the subject is. Single HTML file, runs entirely in your browser.",
+          "tags": [
+            "Video"
+          ],
+          "url": "https://github.com/faarisaahmed/object-tracker",
+          "live": "https://faarisaahmed.github.io/object-tracker/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "HTML",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-09T09:59:38Z",
+          "pushed": "2026-09-18T21:03:34Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "song-sampler",
+          "title": "OIIA Song Sampler",
+          "tagline": "Turn any MIDI file into a spinning-cat OIIA song",
+          "description": "Turn any MIDI into an OIIA cat song",
+          "tags": [
+            "Audio"
+          ],
+          "url": "https://github.com/faarisaahmed/song-sampler",
+          "live": "https://faarisaahmed.github.io/song-sampler/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "JavaScript",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-23T00:04:31Z",
+          "pushed": "2026-09-23T23:26:51Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "multicam",
+          "title": "CamRally",
+          "tagline": "Turn a group of phones into a multi-camera film set with phone-to-phone clip sharing",
+          "description": "This functions as a multi camera set up for multiples phones to mimic the movie making software's multi camera setup tools",
+          "tags": [
+            "Video",
+            "P2P"
+          ],
+          "url": "https://github.com/faarisaahmed/multicam",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [
+            {
+              "label": "Open app",
+              "url": "https://multicam-app.web.app",
+              "primary": true
+            }
+          ],
+          "language": "JavaScript",
+          "stars": 1,
+          "forks": 0,
+          "created": "2026-07-03T22:40:36Z",
+          "pushed": "2026-07-08T19:16:47Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "pokemon-pull-tracker",
+          "title": "Pull Tracker",
+          "tagline": "Prices and pull rates for every English and Japanese Pokémon TCG set",
+          "description": "A database home that allows you to see various Pokémon sets' pull rates and market prices",
+          "tags": [
+            "Data"
+          ],
+          "url": "https://github.com/faarisaahmed/pokemon-pull-tracker",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "TypeScript",
+          "stars": 1,
+          "forks": 0,
+          "created": "2026-08-31T16:58:15Z",
+          "pushed": "2026-09-18T21:03:56Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "star-wars-archive",
+          "title": "Star Wars Archive",
+          "tagline": "Every canon Star Wars film and show, in order",
+          "description": "An archive of all canon Star Wars films and shows in order with more info about each. The beginning intro is supposed to have swmt.mp3, but due to copyright issues, you'll have to get your own audio file and drop it into media folder and open the website!",
+          "tags": [
+            "Archive"
+          ],
+          "url": "https://github.com/faarisaahmed/star-wars-archive",
+          "live": "https://faarisaahmed.github.io/star-wars-archive/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "JavaScript",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-07-11T19:21:19Z",
+          "pushed": "2026-09-18T21:04:30Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "Alternative-NewTab",
+          "title": "Alternative New Tab",
+          "tagline": "A nicer, customizable new tab page for your browser",
+          "description": "A nicer customizable newtab for your browser",
+          "tags": [
+            "Productivity"
+          ],
+          "url": "https://github.com/faarisaahmed/Alternative-NewTab",
+          "live": "https://faarisaahmed.github.io/Alternative-NewTab/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "HTML",
+          "stars": 1,
+          "forks": 0,
+          "created": "2026-07-04T23:42:41Z",
+          "pushed": "2026-07-04T23:47:20Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "adab-health-demo",
+          "title": "AdaB Health Demo",
+          "tagline": "A single-page pitch microsite for AdaB Health, built for investor and partner demos",
+          "description": "",
+          "tags": [
+            "Microsite"
+          ],
+          "url": "https://github.com/faarisaahmed/adab-health-demo",
+          "live": "https://faarisaahmed.github.io/adab-health-demo/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "HTML",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-07-13T19:18:04Z",
+          "pushed": "2026-09-18T21:03:58Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI & Trading",
+      "blurb": "Autonomous agents trading real market data on paper accounts.",
+      "accent": "#b9a4f0",
+      "icon": "chart",
+      "projects": [
+        {
+          "name": "trading-competition",
+          "title": "Model Trading Competition",
+          "tagline": "Eight autonomous strategies compete over three one-week rounds, with a provably fair draft",
+          "description": "2026 Model Trading Competition: eight autonomous trading strategies compete over three one-week rounds on Alpaca paper accounts, with a provably fair Round 3 draft",
+          "tags": [
+            "Alpaca",
+            "Agents"
+          ],
+          "url": "https://github.com/faarisaahmed/trading-competition",
+          "live": "https://faarisaahmed.github.io/trading-competition/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "Python",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-18T01:10:59Z",
+          "pushed": "2026-09-23T21:19:21Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "team-shaw-hackathon",
+          "title": "Team Shaw: Congress Tracker",
+          "tagline": "An autonomous AI trading agent that follows congressional stock disclosures",
+          "description": "Autonomous AI trading agent tracking congressional stock disclosures using Alpaca",
+          "tags": [
+            "Hackathon",
+            "Alpaca"
+          ],
+          "url": "https://github.com/faarisaahmed/team-shaw-hackathon",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "Python",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-08-24T21:32:53Z",
+          "pushed": "2026-09-18T21:04:45Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        }
+      ]
+    },
+    {
+      "id": "learning",
+      "title": "Learning",
+      "blurb": "Courses, worksheets and study tools.",
+      "accent": "#f0d38a",
+      "icon": "book",
+      "projects": [
+        {
+          "name": "pikachu",
+          "title": "Git Foundations",
+          "tagline": "A three-part starter course: create a repo, deploy it to Pages, collaborate with a team",
+          "description": "w stuff",
+          "tags": [
+            "Course"
+          ],
+          "url": "https://github.com/faarisaahmed/pikachu",
+          "live": "https://faarisaahmed.github.io/pikachu/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "HTML",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-08-04T09:33:35Z",
+          "pushed": "2026-09-18T21:04:21Z",
+          "branch": "main",
+          "release": null,
+          "readme": false
+        },
+        {
+          "name": "study-guider",
+          "title": "Study Guider",
+          "tagline": "Turn any study guide into questions and places to learn",
+          "description": "This will turn any study guide given and make questions and places to learn",
+          "tags": [
+            "Study"
+          ],
+          "url": "https://github.com/faarisaahmed/study-guider",
+          "live": "https://faarisaahmed.github.io/study-guider/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "HTML",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-05-31T00:53:10Z",
+          "pushed": "2026-06-01T22:51:03Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "math-learning",
+          "title": "Math Worksheets",
+          "tagline": "Two 400-page arithmetic worksheet books, generated as print-ready PDFs",
+          "description": "Two 400-page arithmetic worksheet books, generated as print-ready PDFs",
+          "tags": [
+            "PDF"
+          ],
+          "url": "https://github.com/faarisaahmed/math-learning",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "Python",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-09T09:50:53Z",
+          "pushed": "2026-09-18T21:11:29Z",
+          "branch": "main",
+          "release": {
+            "tag": "v1.0.0",
+            "url": "https://github.com/faarisaahmed/math-learning/releases/tag/v1.0.0"
+          },
+          "readme": true
+        },
+        {
+          "name": "Gen-Alpha-Terminology-Lessons",
+          "title": "Gen Alpha Terminology",
+          "tagline": "Learn to speak fluent Gen Alpha",
+          "description": "A place to learn how Gen alphas speak",
+          "tags": [
+            "For fun"
+          ],
+          "url": "https://github.com/faarisaahmed/Gen-Alpha-Terminology-Lessons",
+          "live": "https://faarisaahmed.github.io/Gen-Alpha-Terminology-Lessons/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "HTML",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-06-18T13:47:47Z",
+          "pushed": "2026-06-18T13:59:50Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "Tools & Experiments",
+      "blurb": "Libraries, utilities and one-off experiments.",
+      "accent": "#e89aa8",
+      "icon": "wrench",
+      "projects": [
+        {
+          "name": "core-flux",
+          "title": "core-flux",
+          "tagline": "Fast Python video editing built on native FFmpeg filters, with a clean chainable API",
+          "description": "core-flux is a high-performance Python video editing library built entirely on native FFmpeg filters. It features a clean, chainable API that bypasses Python-level bottlenecks to process trimming, cropping, resizing, color adjustments, and effects at maximum speed.",
+          "tags": [
+            "Library",
+            "FFmpeg"
+          ],
+          "url": "https://github.com/faarisaahmed/core-flux",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "Python",
+          "stars": 3,
+          "forks": 0,
+          "created": "2026-06-19T21:41:14Z",
+          "pushed": "2026-09-18T21:04:03Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "morse-keyboard",
+          "title": "Morse Keyboard",
+          "tagline": "A system-wide iOS keyboard that types raw Morse code",
+          "description": "A system-wide iOS keyboard that types raw Morse code",
+          "tags": [
+            "iOS"
+          ],
+          "url": "https://github.com/faarisaahmed/morse-keyboard",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "Swift",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-08T19:23:46Z",
+          "pushed": "2026-09-18T21:04:28Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "pretend-timemachine-screen",
+          "title": "Pretend Time Machine",
+          "tagline": "A fake time machine control panel to use as a prop in games and movies",
+          "description": "Just a Time Machine screen that shows a panel god for games and movies",
+          "tags": [
+            "Prop"
+          ],
+          "url": "https://github.com/faarisaahmed/pretend-timemachine-screen",
+          "live": "https://faarisaahmed.github.io/pretend-timemachine-screen/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "HTML",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-08-22T16:32:38Z",
+          "pushed": "2026-08-22T16:36:18Z",
+          "branch": "main",
+          "release": null,
+          "readme": true
+        },
+        {
+          "name": "password-prompt",
+          "title": "Password Keeper",
+          "tagline": "A tiny terminal password keeper in Python",
+          "description": "",
+          "tags": [
+            "CLI"
+          ],
+          "url": "https://github.com/faarisaahmed/password-prompt",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "Python",
+          "stars": 0,
+          "forks": 1,
+          "created": "2022-05-24T20:22:36Z",
+          "pushed": "2025-12-31T12:52:22Z",
+          "branch": "main",
+          "release": null,
+          "readme": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Faaris Ahmed · Projects</title>
+  <meta name="description" content="Silksong mods, games, web apps and experiments by Faaris Ahmed.">
+  <meta name="theme-color" content="#07090d">
+  <meta property="og:title" content="Faaris Ahmed · Projects">
+  <meta property="og:description" content="Silksong mods, games, web apps and experiments.">
+  <meta property="og:image" content="https://faarisaahmed.github.io/assets/avatar.png">
+  <meta property="og:url" content="https://faarisaahmed.github.io">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="assets/avatar.png">
+  <link rel="apple-touch-icon" href="assets/avatar.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <canvas id="motes" aria-hidden="true"></canvas>
+  <div class="backdrop" aria-hidden="true">
+    <div class="glow glow-a"></div>
+    <div class="glow glow-b"></div>
+    <div class="glow glow-c"></div>
+    <div class="grain"></div>
+  </div>
+
+  <header class="hero" id="top">
+    <div class="avatar reveal" style="--d:0">
+      <div class="avatar-ring"></div>
+      <img src="assets/avatar.png" alt="Faaris Ahmed" width="136" height="136">
+    </div>
+    <p class="eyebrow reveal" style="--d:1">
+      <span class="pulse"></span>
+      <span id="location">Brooklyn, NY</span>
+    </p>
+    <h1 class="reveal" style="--d:2">Faaris <em>Ahmed</em></h1>
+    <p class="bio reveal" style="--d:3" id="bio">i like coding :)</p>
+    <p class="summary reveal" style="--d:4">
+      I build Silksong mods, browser games, web apps and the occasional trading bot.
+      Everything I've shipped is below.
+    </p>
+    <dl class="stats reveal" style="--d:5" id="stats"></dl>
+    <div class="hero-actions reveal" style="--d:6">
+      <a class="btn btn-primary" href="#projects">
+        Browse projects
+        <svg viewBox="0 0 24 24" class="i"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="https://github.com/faarisaahmed" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" class="i-fill"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </header>
+
+  <nav class="toolbar" id="toolbar" aria-label="Project groups">
+    <div class="toolbar-inner">
+      <a class="toolbar-me" href="#top" aria-label="Back to top">
+        <img src="assets/avatar.png" alt="" width="28" height="28">
+      </a>
+      <div class="chips" id="chips"></div>
+      <label class="search">
+        <svg viewBox="0 0 24 24" class="i"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="search" type="search" placeholder="Search projects" title="Search (press /)" autocomplete="off" spellcheck="false" aria-label="Search projects">
+      </label>
+    </div>
+  </nav>
+
+  <main id="projects">
+    <div id="groups"></div>
+    <div class="empty" id="empty" hidden>
+      <p>Nothing matches <strong id="empty-q"></strong>.</p>
+      <button class="btn btn-ghost" type="button" id="empty-clear">Clear search</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/avatar.png" alt="" width="36" height="36">
+    <p>Made by Faaris Ahmed · Synced from <a href="https://github.com/faarisaahmed" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+  <dialog class="modal" id="modal" aria-labelledby="modal-title">
+    <div class="modal-shell">
+      <header class="modal-head">
+        <div class="modal-heading">
+          <p class="modal-group" id="modal-group"></p>
+          <h2 id="modal-title"></h2>
+          <p class="modal-tagline" id="modal-tagline"></p>
+        </div>
+        <button class="icon-btn" type="button" id="modal-close" aria-label="Close">
+          <svg viewBox="0 0 24 24" class="i"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+        <div class="modal-actions" id="modal-actions"></div>
+      </header>
+      <div class="modal-body" id="modal-body" tabindex="-1" autofocus>
+        <article class="markdown" id="readme"></article>
+      </div>
+    </div>
+  </dialog>
+
+  <noscript><p class="noscript">This page needs JavaScript to list projects. You can find them all on <a href="https://github.com/faarisaahmed?tab=repositories">GitHub</a>.</p></noscript>
+</body>
+</html>

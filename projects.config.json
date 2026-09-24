@@ -1,0 +1,99 @@
+{
+  "user": "faarisaahmed",
+  "exclude": ["faarisaahmed.github.io", "python-game"],
+  "includeForks": false,
+  "groups": [
+    {
+      "id": "silksong",
+      "title": "Silksong Mods",
+      "blurb": "Mods, multiplayer addons and modding tools for Hollow Knight: Silksong.",
+      "accent": "#9db7e0",
+      "icon": "mask",
+      "repos": [
+        { "name": "Beastfly", "tagline": "A cross-platform terminal mod manager for Silksong: Steam, GOG, Xbox, Epic, Wine and Proton", "tags": ["Mod manager", "CLI"] },
+        { "name": "SilksongPantheons", "title": "Silksong Pantheons", "tagline": "Hollow Knight's Godhome pantheons, rebuilt around Silksong's own bosses", "tags": ["Boss rush"] },
+        { "name": "AdaptiveEnemies", "title": "Adaptive Enemies", "tagline": "Enemies learn how you fight, and they share what they learn", "tags": ["Gameplay"] },
+        { "name": "GauntletMod", "title": "Gauntlet Mod", "tagline": "Build your own custom enemy gauntlets", "tags": ["Gameplay"] },
+        { "name": "silksong-spawn-enemy-on-hit", "title": "Spawn Enemy on Hit", "tagline": "Every hit you take summons an enemy you've already met", "tags": ["Challenge"] },
+        { "name": "SSMPEnemySync", "title": "SSMP Enemy Sync", "tagline": "Shared enemies for Silksong multiplayer: one enemy, one health pool, bosses included", "tags": ["Multiplayer"] },
+        { "name": "ssmp-enemy-puppet", "title": "SSMP Enemy Puppet", "tagline": "Both players take control of enemies and fight each other with them", "tags": ["Multiplayer"] },
+        { "name": "enemy-behavior-api", "title": "Enemy Behavior API", "tagline": "Reads the PlayMaker FSMs and exposes every enemy's attacks and movement as a structured schema", "tags": ["API", "In development"] },
+        { "name": "enemy-puppeteer", "title": "Enemy Puppeteer", "tagline": "Click an enemy, fire its attacks, steer it with the arrow keys", "tags": ["Experimental"] },
+        { "name": "SilksongGodhome", "title": "Silksong Godhome", "tagline": "An experimental port of Hollow Knight's Godhome into Silksong", "tags": ["Experimental"] }
+      ]
+    },
+    {
+      "id": "games",
+      "title": "Games",
+      "blurb": "Things you can actually play, most of them right in your browser.",
+      "accent": "#e6b58a",
+      "icon": "gamepad",
+      "repos": [
+        { "name": "toothless-sim-remaster", "title": "Dragon Flight Sim", "tagline": "Fly a dragon across an open archipelago, a heavily upgraded remaster of the original", "tags": ["3D", "Browser"] },
+        { "name": "hide-and-go-seek", "title": "Hide and Go Seek", "tagline": "Real-time multiplayer hide-and-seek, played across a house", "tags": ["Multiplayer"], "liveLabel": "About page", "links": [{ "label": "Play", "url": "https://hide-and-go-seek.onrender.com", "primary": true }] },
+        { "name": "super-mario-bros-rl-model", "title": "Super Mario Bros + RL", "tagline": "Super Mario Bros rebuilt from scratch in Python, plus a PPO agent trained to speedrun 1-1", "tags": ["Reinforcement learning"], "liveLabel": "Play" },
+        { "name": "Snake-Python", "title": "Snake", "tagline": "The classic, written in Python", "tags": ["Classic"] }
+      ]
+    },
+    {
+      "id": "web",
+      "title": "Web Apps",
+      "blurb": "Tools and sites that run in the browser. Most need nothing installed.",
+      "accent": "#8fd3c1",
+      "icon": "globe",
+      "repos": [
+        { "name": "object-tracker", "title": "Object Tracker", "tagline": "Reframe video to any aspect ratio by keyframing where the subject is, all in one HTML file", "tags": ["Video"] },
+        { "name": "song-sampler", "title": "OIIA Song Sampler", "tagline": "Turn any MIDI file into a spinning-cat OIIA song", "tags": ["Audio"] },
+        { "name": "multicam", "title": "CamRally", "tagline": "Turn a group of phones into a multi-camera film set with phone-to-phone clip sharing", "tags": ["Video", "P2P"], "links": [{ "label": "Open app", "url": "https://multicam-app.web.app", "primary": true }] },
+        { "name": "pokemon-pull-tracker", "title": "Pull Tracker", "tagline": "Prices and pull rates for every English and Japanese Pokémon TCG set", "tags": ["Data"] },
+        { "name": "star-wars-archive", "title": "Star Wars Archive", "tagline": "Every canon Star Wars film and show, in order", "tags": ["Archive"] },
+        { "name": "Alternative-NewTab", "title": "Alternative New Tab", "tagline": "A nicer, customizable new tab page for your browser", "tags": ["Productivity"] },
+        { "name": "adab-health-demo", "title": "AdaB Health Demo", "tagline": "A single-page pitch microsite for AdaB Health, built for investor and partner demos", "tags": ["Microsite"] }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI & Trading",
+      "blurb": "Autonomous agents trading real market data on paper accounts.",
+      "accent": "#b9a4f0",
+      "icon": "chart",
+      "repos": [
+        { "name": "trading-competition", "title": "Model Trading Competition", "tagline": "Eight autonomous strategies compete over three one-week rounds, with a provably fair draft", "tags": ["Alpaca", "Agents"] },
+        { "name": "team-shaw-hackathon", "title": "Team Shaw: Congress Tracker", "tagline": "An autonomous AI trading agent that follows congressional stock disclosures", "tags": ["Hackathon", "Alpaca"] }
+      ]
+    },
+    {
+      "id": "learning",
+      "title": "Learning",
+      "blurb": "Courses, worksheets and study tools.",
+      "accent": "#f0d38a",
+      "icon": "book",
+      "repos": [
+        { "name": "pikachu", "title": "Git Foundations", "tagline": "A three-part starter course: create a repo, deploy it to Pages, collaborate with a team", "tags": ["Course"] },
+        { "name": "study-guider", "title": "Study Guider", "tagline": "Turn any study guide into questions and places to learn", "tags": ["Study"] },
+        { "name": "math-learning", "title": "Math Worksheets", "tagline": "Two 400-page arithmetic worksheet books, generated as print-ready PDFs", "tags": ["PDF"] },
+        { "name": "Gen-Alpha-Terminology-Lessons", "title": "Gen Alpha Terminology", "tagline": "Learn to speak fluent Gen Alpha", "tags": ["For fun"] }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "Tools & Experiments",
+      "blurb": "Libraries, utilities and one-off experiments.",
+      "accent": "#e89aa8",
+      "icon": "wrench",
+      "repos": [
+        { "name": "core-flux", "title": "core-flux", "tagline": "Fast Python video editing built on native FFmpeg filters, with a clean chainable API", "tags": ["Library", "FFmpeg"] },
+        { "name": "morse-keyboard", "title": "Morse Keyboard", "tagline": "A system-wide iOS keyboard that types raw Morse code", "tags": ["iOS"] },
+        { "name": "pretend-timemachine-screen", "title": "Pretend Time Machine", "tagline": "A fake time machine control panel to use as a prop in games and movies", "tags": ["Prop"] },
+        { "name": "password-prompt", "title": "Password Keeper", "tagline": "A tiny terminal password keeper in Python", "tags": ["CLI"] }
+      ]
+    }
+  ],
+  "fallbackGroup": {
+    "id": "more",
+    "title": "More Projects",
+    "blurb": "Everything else.",
+    "accent": "#c9ced6",
+    "icon": "spark"
+  }
+}
