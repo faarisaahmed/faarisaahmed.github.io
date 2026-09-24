@@ -6,10 +6,13 @@ My homepage: every project I've made, grouped and browsable, with READMEs readab
 
 ## How it works
 
-- `projects.config.json`: the groups, their order, and a short tagline and tags for each repo. Any new public repo that isn't listed shows up automatically under **More Projects** until you place it.
+Three pages share one nav: **About** (`/`), **Projects** (`/projects/`) and **Live** (`/live/`, every deployed site with a preview).
+
+- `projects.config.json`: the about-me text, the pinned projects, the groups and their order, and a short tagline and tags for each repo. Any new public repo that isn't listed shows up automatically under **More Projects** until you place it.
 - `scripts/build.py` pulls repo metadata, GitHub Pages URLs, latest releases and READMEs from the GitHub API into `data/`.
 - A GitHub Action (`.github/workflows/refresh.yml`) re-runs the build every day, and whenever the config changes, so the site stays in sync.
-- The site is plain HTML/CSS/JS with no build step: `index.html`, `styles.css`, `app.js`.
+- `scripts/screenshots.mjs` captures the preview images on the Live page into `assets/shots/`. It's run by hand (a new deployment shows a styled placeholder until you do), then re-run `build.py`.
+- The site is plain HTML/CSS/JS with no build step: `index.html`, `projects/`, `live/`, `assets/css/site.css`, `assets/js/site.js`.
 
 ## Local preview
 

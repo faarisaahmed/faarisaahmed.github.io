@@ -5,248 +5,23 @@
     "bio": "i like coding :)",
     "location": "Brooklyn, NY",
     "url": "https://github.com/faarisaahmed",
-    "followers": 9
+    "followers": 9,
+    "since": "2022-01-17T15:49:39Z"
   },
+  "about": [
+    "Hey, I'm Faaris. I like coding :) I'm based in Brooklyn, and pretty much everything I make ends up on this site.",
+    "I build all kinds of things: games that run in the browser (a dragon flight sim, and Super Mario Bros from scratch with an AI that learned to play it), small web tools that work entirely in the page, autonomous trading agents that compete on paper accounts, and a stack of mods for Hollow Knight: Silksong.",
+    "It's all open source. Browse the projects to read about each one, or go straight to the live sites and try them."
+  ],
+  "pinned": [
+    "trading-competition",
+    "toothless-sim-remaster",
+    "super-mario-bros-rl-model",
+    "song-sampler",
+    "object-tracker",
+    "hide-and-go-seek"
+  ],
   "groups": [
-    {
-      "id": "silksong",
-      "title": "Silksong Mods",
-      "blurb": "Mods, multiplayer addons and modding tools for Hollow Knight: Silksong.",
-      "accent": "#9db7e0",
-      "icon": "mask",
-      "projects": [
-        {
-          "name": "Beastfly",
-          "title": "Beastfly",
-          "tagline": "A cross-platform terminal mod manager for Silksong: Steam, GOG, Xbox, Epic, Wine and Proton",
-          "description": "A CLI mod manager for Hollow Knight: Silksong",
-          "tags": [
-            "Mod manager",
-            "CLI"
-          ],
-          "url": "https://github.com/faarisaahmed/Beastfly",
-          "live": null,
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "Python",
-          "stars": 1,
-          "forks": 0,
-          "created": "2026-09-01T15:31:20Z",
-          "pushed": "2026-09-18T21:03:45Z",
-          "branch": "main",
-          "release": {
-            "tag": "v0.1.1",
-            "url": "https://github.com/faarisaahmed/Beastfly/releases/tag/v0.1.1"
-          },
-          "readme": true
-        },
-        {
-          "name": "SilksongPantheons",
-          "title": "Silksong Pantheons",
-          "tagline": "Hollow Knight's Godhome pantheons, rebuilt around Silksong's own bosses",
-          "description": "Hollow Knight's Godhome in Silksong, fought against Silksong's own bosses",
-          "tags": [
-            "Boss rush"
-          ],
-          "url": "https://github.com/faarisaahmed/SilksongPantheons",
-          "live": null,
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "C#",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-09-10T00:07:42Z",
-          "pushed": "2026-09-20T15:13:27Z",
-          "branch": "main",
-          "release": null,
-          "readme": true
-        },
-        {
-          "name": "AdaptiveEnemies",
-          "title": "Adaptive Enemies",
-          "tagline": "Enemies learn how you fight, and they share what they learn",
-          "description": "A mod for Hollow Knight: Silksong where enemies learn how you fight and share what they learn.",
-          "tags": [
-            "Gameplay"
-          ],
-          "url": "https://github.com/faarisaahmed/AdaptiveEnemies",
-          "live": null,
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "C#",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-08-25T17:16:08Z",
-          "pushed": "2026-08-25T17:17:14Z",
-          "branch": "main",
-          "release": {
-            "tag": "v1.0.0",
-            "url": "https://github.com/faarisaahmed/AdaptiveEnemies/releases/tag/v1.0.0"
-          },
-          "readme": true
-        },
-        {
-          "name": "GauntletMod",
-          "title": "Gauntlet Mod",
-          "tagline": "Build your own custom enemy gauntlets",
-          "description": "A mod for Hollow Knight: Silksong that allows custom gauntlet creation.",
-          "tags": [
-            "Gameplay"
-          ],
-          "url": "https://github.com/faarisaahmed/GauntletMod",
-          "live": null,
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "C#",
-          "stars": 1,
-          "forks": 0,
-          "created": "2026-08-22T11:23:01Z",
-          "pushed": "2026-09-18T21:03:37Z",
-          "branch": "main",
-          "release": {
-            "tag": "v1.0.0",
-            "url": "https://github.com/faarisaahmed/GauntletMod/releases/tag/v1.0.0"
-          },
-          "readme": true
-        },
-        {
-          "name": "silksong-spawn-enemy-on-hit",
-          "title": "Spawn Enemy on Hit",
-          "tagline": "Every hit you take summons an enemy you've already met",
-          "description": "Silksong challenge mod: every hit summons an enemy you have already met, so the more of Pharloom you explore the deadlier your own mistakes become.",
-          "tags": [
-            "Challenge"
-          ],
-          "url": "https://github.com/faarisaahmed/silksong-spawn-enemy-on-hit",
-          "live": null,
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "C#",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-09-16T22:21:28Z",
-          "pushed": "2026-09-18T21:11:40Z",
-          "branch": "main",
-          "release": {
-            "tag": "v1.0.1",
-            "url": "https://github.com/faarisaahmed/silksong-spawn-enemy-on-hit/releases/tag/v1.0.1"
-          },
-          "readme": true
-        },
-        {
-          "name": "SSMPEnemySync",
-          "title": "SSMP Enemy Sync",
-          "tagline": "Shared enemies for Silksong multiplayer: one enemy, one health pool, bosses included",
-          "description": "SSMP addon that makes Silksong enemies shared between both players: one enemy, one health pool, hit by either player. Bosses included.",
-          "tags": [
-            "Multiplayer"
-          ],
-          "url": "https://github.com/faarisaahmed/SSMPEnemySync",
-          "live": null,
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "C#",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-09-13T16:23:19Z",
-          "pushed": "2026-09-18T21:11:43Z",
-          "branch": "main",
-          "release": {
-            "tag": "v0.1.0",
-            "url": "https://github.com/faarisaahmed/SSMPEnemySync/releases/tag/v0.1.0"
-          },
-          "readme": true
-        },
-        {
-          "name": "ssmp-enemy-puppet",
-          "title": "SSMP Enemy Puppet",
-          "tagline": "Both players take control of enemies and fight each other with them",
-          "description": "SSMP addon: both players take control of enemies and fight each other with them. Built on SSMPEnemySync + Enemy Behavior API.",
-          "tags": [
-            "Multiplayer"
-          ],
-          "url": "https://github.com/faarisaahmed/ssmp-enemy-puppet",
-          "live": null,
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "C#",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-09-13T16:39:08Z",
-          "pushed": "2026-09-18T21:11:41Z",
-          "branch": "main",
-          "release": null,
-          "readme": true
-        },
-        {
-          "name": "enemy-behavior-api",
-          "title": "Enemy Behavior API",
-          "tagline": "Reads the PlayMaker FSMs and exposes every enemy's attacks and movement as a structured schema",
-          "description": "Generic enemy behaviour discovery API for Hollow Knight: Silksong (BepInEx). Reflects over PlayMaker FSMs to expose attacks and movement as a structured schema. In development.",
-          "tags": [
-            "API",
-            "In development"
-          ],
-          "url": "https://github.com/faarisaahmed/enemy-behavior-api",
-          "live": null,
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "C#",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-09-12T17:58:20Z",
-          "pushed": "2026-09-18T21:11:35Z",
-          "branch": "main",
-          "release": null,
-          "readme": true
-        },
-        {
-          "name": "enemy-puppeteer",
-          "title": "Enemy Puppeteer",
-          "tagline": "Click an enemy, fire its attacks, steer it with the arrow keys",
-          "description": "Experimental rig for hand-driving Silksong enemies through the Enemy Behavior API - click an enemy, fire its attacks, steer it with arrow keys.",
-          "tags": [
-            "Experimental"
-          ],
-          "url": "https://github.com/faarisaahmed/enemy-puppeteer",
-          "live": null,
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "C#",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-09-12T18:22:45Z",
-          "pushed": "2026-09-18T21:11:37Z",
-          "branch": "main",
-          "release": null,
-          "readme": true
-        },
-        {
-          "name": "SilksongGodhome",
-          "title": "Silksong Godhome",
-          "tagline": "An experimental port of Hollow Knight's Godhome into Silksong",
-          "description": "EXPERIMENTAL work in progress: porting Hollow Knight's Godhome into Silksong. Ships no HK assets - you regenerate them from your own copy.",
-          "tags": [
-            "Experimental"
-          ],
-          "url": "https://github.com/faarisaahmed/SilksongGodhome",
-          "live": null,
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "C#",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-09-09T09:57:23Z",
-          "pushed": "2026-09-18T21:11:31Z",
-          "branch": "main",
-          "release": {
-            "tag": "v0.1.0-final",
-            "url": "https://github.com/faarisaahmed/SilksongGodhome/releases/tag/v0.1.0-final"
-          },
-          "readme": true
-        }
-      ]
-    },
     {
       "id": "games",
       "title": "Games",
@@ -274,7 +49,8 @@
           "pushed": "2026-09-18T21:04:18Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": "/assets/shots/toothless-sim-remaster.webp"
         },
         {
           "name": "hide-and-go-seek",
@@ -301,7 +77,8 @@
           "pushed": "2026-09-18T21:04:26Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": "/assets/shots/hide-and-go-seek.webp"
         },
         {
           "name": "super-mario-bros-rl-model",
@@ -322,7 +99,8 @@
           "pushed": "2026-09-18T21:04:39Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": "/assets/shots/super-mario-bros-rl-model.webp"
         },
         {
           "name": "Snake-Python",
@@ -343,7 +121,8 @@
           "pushed": "2026-01-31T01:15:07Z",
           "branch": "main",
           "release": null,
-          "readme": false
+          "readme": false,
+          "shot": null
         }
       ]
     },
@@ -373,7 +152,8 @@
           "pushed": "2026-09-18T21:03:34Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": "/assets/shots/object-tracker.webp"
         },
         {
           "name": "song-sampler",
@@ -394,7 +174,8 @@
           "pushed": "2026-09-23T23:26:51Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": "/assets/shots/song-sampler.webp"
         },
         {
           "name": "multicam",
@@ -422,7 +203,8 @@
           "pushed": "2026-07-08T19:16:47Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": "/assets/shots/multicam.webp"
         },
         {
           "name": "pokemon-pull-tracker",
@@ -443,7 +225,8 @@
           "pushed": "2026-09-18T21:03:56Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": null
         },
         {
           "name": "star-wars-archive",
@@ -464,7 +247,8 @@
           "pushed": "2026-09-18T21:04:30Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": "/assets/shots/star-wars-archive.webp"
         },
         {
           "name": "Alternative-NewTab",
@@ -485,7 +269,8 @@
           "pushed": "2026-07-04T23:47:20Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": "/assets/shots/Alternative-NewTab.webp"
         },
         {
           "name": "adab-health-demo",
@@ -506,7 +291,8 @@
           "pushed": "2026-09-18T21:03:58Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": "/assets/shots/adab-health-demo.webp"
         }
       ]
     },
@@ -537,7 +323,8 @@
           "pushed": "2026-09-23T21:19:21Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": "/assets/shots/trading-competition.webp"
         },
         {
           "name": "team-shaw-hackathon",
@@ -559,7 +346,257 @@
           "pushed": "2026-09-18T21:04:45Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": null
+        }
+      ]
+    },
+    {
+      "id": "silksong",
+      "title": "Silksong Mods",
+      "blurb": "Mods, multiplayer addons and modding tools for Hollow Knight: Silksong.",
+      "accent": "#9db7e0",
+      "icon": "puzzle",
+      "projects": [
+        {
+          "name": "Beastfly",
+          "title": "Beastfly",
+          "tagline": "A cross-platform terminal mod manager for Silksong: Steam, GOG, Xbox, Epic, Wine and Proton",
+          "description": "A CLI mod manager for Hollow Knight: Silksong",
+          "tags": [
+            "Mod manager",
+            "CLI"
+          ],
+          "url": "https://github.com/faarisaahmed/Beastfly",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "Python",
+          "stars": 1,
+          "forks": 0,
+          "created": "2026-09-01T15:31:20Z",
+          "pushed": "2026-09-18T21:03:45Z",
+          "branch": "main",
+          "release": {
+            "tag": "v0.1.1",
+            "url": "https://github.com/faarisaahmed/Beastfly/releases/tag/v0.1.1"
+          },
+          "readme": true,
+          "shot": null
+        },
+        {
+          "name": "SilksongPantheons",
+          "title": "Silksong Pantheons",
+          "tagline": "Hollow Knight's Godhome pantheons, rebuilt around Silksong's own bosses",
+          "description": "Hollow Knight's Godhome in Silksong, fought against Silksong's own bosses",
+          "tags": [
+            "Boss rush"
+          ],
+          "url": "https://github.com/faarisaahmed/SilksongPantheons",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-10T00:07:42Z",
+          "pushed": "2026-09-20T15:13:27Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
+          "shot": null
+        },
+        {
+          "name": "AdaptiveEnemies",
+          "title": "Adaptive Enemies",
+          "tagline": "Enemies learn how you fight, and they share what they learn",
+          "description": "A mod for Hollow Knight: Silksong where enemies learn how you fight and share what they learn.",
+          "tags": [
+            "Gameplay"
+          ],
+          "url": "https://github.com/faarisaahmed/AdaptiveEnemies",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-08-25T17:16:08Z",
+          "pushed": "2026-08-25T17:17:14Z",
+          "branch": "main",
+          "release": {
+            "tag": "v1.0.0",
+            "url": "https://github.com/faarisaahmed/AdaptiveEnemies/releases/tag/v1.0.0"
+          },
+          "readme": true,
+          "shot": null
+        },
+        {
+          "name": "GauntletMod",
+          "title": "Gauntlet Mod",
+          "tagline": "Build your own custom enemy gauntlets",
+          "description": "A mod for Hollow Knight: Silksong that allows custom gauntlet creation.",
+          "tags": [
+            "Gameplay"
+          ],
+          "url": "https://github.com/faarisaahmed/GauntletMod",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 1,
+          "forks": 0,
+          "created": "2026-08-22T11:23:01Z",
+          "pushed": "2026-09-18T21:03:37Z",
+          "branch": "main",
+          "release": {
+            "tag": "v1.0.0",
+            "url": "https://github.com/faarisaahmed/GauntletMod/releases/tag/v1.0.0"
+          },
+          "readme": true,
+          "shot": null
+        },
+        {
+          "name": "silksong-spawn-enemy-on-hit",
+          "title": "Spawn Enemy on Hit",
+          "tagline": "Every hit you take summons an enemy you've already met",
+          "description": "Silksong challenge mod: every hit summons an enemy you have already met, so the more of Pharloom you explore the deadlier your own mistakes become.",
+          "tags": [
+            "Challenge"
+          ],
+          "url": "https://github.com/faarisaahmed/silksong-spawn-enemy-on-hit",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-16T22:21:28Z",
+          "pushed": "2026-09-18T21:11:40Z",
+          "branch": "main",
+          "release": {
+            "tag": "v1.0.1",
+            "url": "https://github.com/faarisaahmed/silksong-spawn-enemy-on-hit/releases/tag/v1.0.1"
+          },
+          "readme": true,
+          "shot": null
+        },
+        {
+          "name": "SSMPEnemySync",
+          "title": "SSMP Enemy Sync",
+          "tagline": "Shared enemies for Silksong multiplayer: one enemy, one health pool, bosses included",
+          "description": "SSMP addon that makes Silksong enemies shared between both players: one enemy, one health pool, hit by either player. Bosses included.",
+          "tags": [
+            "Multiplayer"
+          ],
+          "url": "https://github.com/faarisaahmed/SSMPEnemySync",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-13T16:23:19Z",
+          "pushed": "2026-09-18T21:11:43Z",
+          "branch": "main",
+          "release": {
+            "tag": "v0.1.0",
+            "url": "https://github.com/faarisaahmed/SSMPEnemySync/releases/tag/v0.1.0"
+          },
+          "readme": true,
+          "shot": null
+        },
+        {
+          "name": "ssmp-enemy-puppet",
+          "title": "SSMP Enemy Puppet",
+          "tagline": "Both players take control of enemies and fight each other with them",
+          "description": "SSMP addon: both players take control of enemies and fight each other with them. Built on SSMPEnemySync + Enemy Behavior API.",
+          "tags": [
+            "Multiplayer"
+          ],
+          "url": "https://github.com/faarisaahmed/ssmp-enemy-puppet",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-13T16:39:08Z",
+          "pushed": "2026-09-18T21:11:41Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
+          "shot": null
+        },
+        {
+          "name": "enemy-behavior-api",
+          "title": "Enemy Behavior API",
+          "tagline": "Reads the PlayMaker FSMs and exposes every enemy's attacks and movement as a structured schema",
+          "description": "Generic enemy behaviour discovery API for Hollow Knight: Silksong (BepInEx). Reflects over PlayMaker FSMs to expose attacks and movement as a structured schema. In development.",
+          "tags": [
+            "API",
+            "In development"
+          ],
+          "url": "https://github.com/faarisaahmed/enemy-behavior-api",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-12T17:58:20Z",
+          "pushed": "2026-09-18T21:11:35Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
+          "shot": null
+        },
+        {
+          "name": "enemy-puppeteer",
+          "title": "Enemy Puppeteer",
+          "tagline": "Click an enemy, fire its attacks, steer it with the arrow keys",
+          "description": "Experimental rig for hand-driving Silksong enemies through the Enemy Behavior API - click an enemy, fire its attacks, steer it with arrow keys.",
+          "tags": [
+            "Experimental"
+          ],
+          "url": "https://github.com/faarisaahmed/enemy-puppeteer",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-12T18:22:45Z",
+          "pushed": "2026-09-18T21:11:37Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
+          "shot": null
+        },
+        {
+          "name": "SilksongGodhome",
+          "title": "Silksong Godhome",
+          "tagline": "An experimental port of Hollow Knight's Godhome into Silksong",
+          "description": "EXPERIMENTAL work in progress: porting Hollow Knight's Godhome into Silksong. Ships no HK assets - you regenerate them from your own copy.",
+          "tags": [
+            "Experimental"
+          ],
+          "url": "https://github.com/faarisaahmed/SilksongGodhome",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-09T09:57:23Z",
+          "pushed": "2026-09-18T21:11:31Z",
+          "branch": "main",
+          "release": {
+            "tag": "v0.1.0-final",
+            "url": "https://github.com/faarisaahmed/SilksongGodhome/releases/tag/v0.1.0-final"
+          },
+          "readme": true,
+          "shot": null
         }
       ]
     },
@@ -589,7 +626,8 @@
           "pushed": "2026-09-18T21:04:21Z",
           "branch": "main",
           "release": null,
-          "readme": false
+          "readme": false,
+          "shot": "/assets/shots/pikachu.webp"
         },
         {
           "name": "study-guider",
@@ -610,7 +648,8 @@
           "pushed": "2026-06-01T22:51:03Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": "/assets/shots/study-guider.webp"
         },
         {
           "name": "math-learning",
@@ -634,7 +673,8 @@
             "tag": "v1.0.0",
             "url": "https://github.com/faarisaahmed/math-learning/releases/tag/v1.0.0"
           },
-          "readme": true
+          "readme": true,
+          "shot": null
         },
         {
           "name": "Gen-Alpha-Terminology-Lessons",
@@ -655,7 +695,8 @@
           "pushed": "2026-06-18T13:59:50Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": "/assets/shots/Gen-Alpha-Terminology-Lessons.webp"
         }
       ]
     },
@@ -686,7 +727,8 @@
           "pushed": "2026-09-18T21:04:03Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": null
         },
         {
           "name": "morse-keyboard",
@@ -707,7 +749,8 @@
           "pushed": "2026-09-18T21:04:28Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": null
         },
         {
           "name": "pretend-timemachine-screen",
@@ -728,7 +771,8 @@
           "pushed": "2026-08-22T16:36:18Z",
           "branch": "main",
           "release": null,
-          "readme": true
+          "readme": true,
+          "shot": "/assets/shots/pretend-timemachine-screen.webp"
         },
         {
           "name": "password-prompt",
@@ -749,7 +793,8 @@
           "pushed": "2025-12-31T12:52:22Z",
           "branch": "main",
           "release": null,
-          "readme": false
+          "readme": false,
+          "shot": null
         }
       ]
     }

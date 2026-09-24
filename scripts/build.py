@@ -18,6 +18,7 @@ CONFIG = json.loads((ROOT / "projects.config.json").read_text())
 USER = CONFIG["user"]
 DATA = ROOT / "data"
 READMES = DATA / "readmes"
+SHOTS = ROOT / "assets" / "shots"
 
 
 def token():
@@ -84,6 +85,7 @@ def main():
                 (READMES / f"{name}.md").write_text(text)
                 has_readme = True
         links = list(extra.get("links", []))
+        shot = SHOTS / f"{name}.webp"
         if homepage and homepage != pages and not any(l["url"] == homepage for l in links):
             links.append({"label": "Website", "url": homepage})
         return {
@@ -104,6 +106,7 @@ def main():
             "branch": r["default_branch"],
             "release": {"tag": release["tag_name"], "url": release["html_url"]} if release else None,
             "readme": has_readme,
+            "shot": f"/assets/shots/{name}.webp" if shot.exists() else None,
         }
 
     groups, placed = [], set()
@@ -129,7 +132,10 @@ def main():
             "location": profile.get("location") or "",
             "url": profile["html_url"],
             "followers": profile["followers"],
+            "since": profile["created_at"],
         },
+        "about": CONFIG.get("about", []),
+        "pinned": [n for n in CONFIG.get("pinned", []) if n in repos],
         "groups": groups,
     }
     (DATA / "projects.json").write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n")

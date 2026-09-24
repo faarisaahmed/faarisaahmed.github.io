@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Faaris Ahmed</title>
-  <meta name="description" content="Faaris Ahmed builds games, web apps, trading agents and Silksong mods.">
+  <title>Projects · Faaris Ahmed</title>
+  <meta name="description" content="Every project by Faaris Ahmed, grouped: games, web apps, AI and trading, Silksong mods and more.">
   <meta name="theme-color" content="#07090d">
-  <meta property="og:title" content="Faaris Ahmed">
-  <meta property="og:description" content="Faaris Ahmed builds games, web apps, trading agents and Silksong mods.">
+  <meta property="og:title" content="Projects · Faaris Ahmed">
+  <meta property="og:description" content="Every project by Faaris Ahmed, grouped: games, web apps, AI and trading, Silksong mods and more.">
   <meta property="og:image" content="https://faarisaahmed.github.io/assets/avatar.png">
-  <meta property="og:url" content="https://faarisaahmed.github.io">
+  <meta property="og:url" content="https://faarisaahmed.github.io/projects/">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="/assets/avatar.png">
   <link rel="apple-touch-icon" href="/assets/avatar.png">
@@ -22,7 +22,7 @@
   <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
   <script defer src="/assets/js/site.js"></script>
 </head>
-<body data-page="about">
+<body data-page="projects">
   <canvas id="motes" aria-hidden="true"></canvas>
   <div class="backdrop" aria-hidden="true"><div class="grain"></div></div>
 
@@ -30,8 +30,8 @@
     <div class="wrap">
       <a class="brand" href="/"><img src="/assets/avatar.png" alt="" width="30" height="30"><span>Faaris Ahmed</span></a>
       <div class="nav-links">
-        <a href="/" aria-current="page">About</a>
-        <a href="/projects/">Projects</a>
+        <a href="/">About</a>
+        <a href="/projects/" aria-current="page">Projects</a>
         <a href="/live/">Live</a>
       </div>
       <div class="nav-end">
@@ -40,51 +40,35 @@
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="avatar reveal" style="--d:0">
-      <div class="avatar-ring"></div>
-      <img src="/assets/avatar.png" alt="Faaris Ahmed" width="136" height="136">
-    </div>
-    <p class="eyebrow reveal" style="--d:1"><span class="pulse"></span><span id="location">Brooklyn, NY</span></p>
-    <h1 class="display reveal" style="--d:2">Faaris <em>Ahmed</em></h1>
-    <p class="bio reveal" style="--d:3" id="bio">i like coding :)</p>
-    <dl class="stats reveal" style="--d:4" id="stats"></dl>
-    <div class="hero-actions reveal" style="--d:5">
-      <a class="btn btn-primary" href="/projects/">See my projects <svg viewBox="0 0 24 24" class="i"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-ghost" href="/live/"><svg viewBox="0 0 24 24" class="i"><path d="M7 17 17 7M8 7h9v9"/></svg> Try the live sites</a>
-    </div>
+  <header class="page-head">
+    <p class="eyebrow reveal" style="--d:0"><span class="pulse"></span><span><span id="count">31</span> repositories</span></p>
+    <h1 class="display reveal" style="--d:1">Projects</h1>
+    <p class="lede reveal" style="--d:2">Everything I've built, grouped by what it is. Open any project for details, its README, and links.</p>
   </header>
 
   <main>
-    <section class="section wrap" aria-labelledby="about-h">
-      <div class="section-head"><div><span class="kicker">About me</span><h2 id="about-h">Hi there.</h2></div></div>
-      <div class="about-grid">
-        <div class="about-text spot in-view" id="about-text"></div>
-        <ul class="facts spot in-view" style="--i:1" id="facts"></ul>
-      </div>
-    </section>
-
-    <section class="section wrap" aria-labelledby="pinned-h">
-      <div class="section-head">
-        <div><span class="kicker">Pinned</span><h2 id="pinned-h">Start here</h2></div>
-        <a class="more" href="/projects/">All projects <svg viewBox="0 0 24 24" class="i"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
+    <section class="section wrap" style="padding-top:56px" aria-labelledby="pinned-h">
+      <div class="section-head"><div><span class="kicker">Pinned</span><h2 id="pinned-h">Favourites</h2></div></div>
       <div class="cards" id="pinned"></div>
     </section>
 
-    <section class="section wrap" aria-labelledby="tiles-h">
-      <div class="section-head">
-        <div><span class="kicker">What I build</span><h2 id="tiles-h">By category</h2></div>
+    <nav class="toolbar" id="toolbar" aria-label="Project groups">
+      <div class="wrap toolbar-inner">
+        <div class="chips" id="chips"></div>
+        <label class="search" title="Search (press /)">
+          <svg viewBox="0 0 24 24" class="i"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="search" type="search" placeholder="Search projects" autocomplete="off" spellcheck="false" aria-label="Search projects">
+        </label>
       </div>
-      <div class="tiles" id="tiles"></div>
-    </section>
+    </nav>
 
-    <section class="section wrap" aria-labelledby="recent-h">
-      <div class="section-head">
-        <div><span class="kicker">Activity</span><h2 id="recent-h">Recently updated</h2></div>
+    <div class="wrap">
+      <div id="groups"></div>
+      <div class="empty" id="empty" hidden>
+        <p>Nothing matches <strong id="empty-q"></strong>.</p>
+        <button class="btn btn-ghost" type="button" id="empty-clear">Clear search</button>
       </div>
-      <ul class="recent" id="recent"></ul>
-    </section>
+    </div>
   </main>
 
   <footer class="footer">

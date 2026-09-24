@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Faaris Ahmed</title>
-  <meta name="description" content="Faaris Ahmed builds games, web apps, trading agents and Silksong mods.">
+  <title>Live sites · Faaris Ahmed</title>
+  <meta name="description" content="Every deployed project by Faaris Ahmed, ready to open and try.">
   <meta name="theme-color" content="#07090d">
-  <meta property="og:title" content="Faaris Ahmed">
-  <meta property="og:description" content="Faaris Ahmed builds games, web apps, trading agents and Silksong mods.">
+  <meta property="og:title" content="Live sites · Faaris Ahmed">
+  <meta property="og:description" content="Every deployed project by Faaris Ahmed, ready to open and try.">
   <meta property="og:image" content="https://faarisaahmed.github.io/assets/avatar.png">
-  <meta property="og:url" content="https://faarisaahmed.github.io">
+  <meta property="og:url" content="https://faarisaahmed.github.io/live/">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="/assets/avatar.png">
   <link rel="apple-touch-icon" href="/assets/avatar.png">
@@ -22,7 +22,7 @@
   <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
   <script defer src="/assets/js/site.js"></script>
 </head>
-<body data-page="about">
+<body data-page="live">
   <canvas id="motes" aria-hidden="true"></canvas>
   <div class="backdrop" aria-hidden="true"><div class="grain"></div></div>
 
@@ -30,9 +30,9 @@
     <div class="wrap">
       <a class="brand" href="/"><img src="/assets/avatar.png" alt="" width="30" height="30"><span>Faaris Ahmed</span></a>
       <div class="nav-links">
-        <a href="/" aria-current="page">About</a>
+        <a href="/">About</a>
         <a href="/projects/">Projects</a>
-        <a href="/live/">Live</a>
+        <a href="/live/" aria-current="page">Live</a>
       </div>
       <div class="nav-end">
         <a class="icon-btn" href="https://github.com/faarisaahmed" target="_blank" rel="noopener" aria-label="GitHub profile" title="GitHub"><svg viewBox="0 0 16 16" class="i-fill"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg></a>
@@ -40,51 +40,15 @@
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="avatar reveal" style="--d:0">
-      <div class="avatar-ring"></div>
-      <img src="/assets/avatar.png" alt="Faaris Ahmed" width="136" height="136">
-    </div>
-    <p class="eyebrow reveal" style="--d:1"><span class="pulse"></span><span id="location">Brooklyn, NY</span></p>
-    <h1 class="display reveal" style="--d:2">Faaris <em>Ahmed</em></h1>
-    <p class="bio reveal" style="--d:3" id="bio">i like coding :)</p>
-    <dl class="stats reveal" style="--d:4" id="stats"></dl>
-    <div class="hero-actions reveal" style="--d:5">
-      <a class="btn btn-primary" href="/projects/">See my projects <svg viewBox="0 0 24 24" class="i"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-ghost" href="/live/"><svg viewBox="0 0 24 24" class="i"><path d="M7 17 17 7M8 7h9v9"/></svg> Try the live sites</a>
-    </div>
+  <header class="page-head">
+    <p class="eyebrow reveal" style="--d:0"><span class="pulse"></span><span><span id="count">14</span> deployments</span></p>
+    <h1 class="display reveal" style="--d:1">Live</h1>
+    <p class="lede reveal" style="--d:2">Everything that's deployed and ready to try. Nothing to install, just click and it opens.</p>
   </header>
 
-  <main>
-    <section class="section wrap" aria-labelledby="about-h">
-      <div class="section-head"><div><span class="kicker">About me</span><h2 id="about-h">Hi there.</h2></div></div>
-      <div class="about-grid">
-        <div class="about-text spot in-view" id="about-text"></div>
-        <ul class="facts spot in-view" style="--i:1" id="facts"></ul>
-      </div>
-    </section>
-
-    <section class="section wrap" aria-labelledby="pinned-h">
-      <div class="section-head">
-        <div><span class="kicker">Pinned</span><h2 id="pinned-h">Start here</h2></div>
-        <a class="more" href="/projects/">All projects <svg viewBox="0 0 24 24" class="i"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-      <div class="cards" id="pinned"></div>
-    </section>
-
-    <section class="section wrap" aria-labelledby="tiles-h">
-      <div class="section-head">
-        <div><span class="kicker">What I build</span><h2 id="tiles-h">By category</h2></div>
-      </div>
-      <div class="tiles" id="tiles"></div>
-    </section>
-
-    <section class="section wrap" aria-labelledby="recent-h">
-      <div class="section-head">
-        <div><span class="kicker">Activity</span><h2 id="recent-h">Recently updated</h2></div>
-      </div>
-      <ul class="recent" id="recent"></ul>
-    </section>
+  <main class="wrap">
+    <div class="filters reveal" style="--d:3" id="filters"></div>
+    <div class="live-grid" id="live"></div>
   </main>
 
   <footer class="footer">
