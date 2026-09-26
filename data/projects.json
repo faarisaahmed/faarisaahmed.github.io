@@ -271,28 +271,6 @@
           "release": null,
           "readme": true,
           "shot": "/assets/shots/Alternative-NewTab.webp"
-        },
-        {
-          "name": "adab-health-demo",
-          "title": "AdaB Health Demo",
-          "tagline": "A single-page pitch microsite for AdaB Health, built for investor and partner demos",
-          "description": "",
-          "tags": [
-            "Microsite"
-          ],
-          "url": "https://github.com/faarisaahmed/adab-health-demo",
-          "live": "https://faarisaahmed.github.io/adab-health-demo/",
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "HTML",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-07-13T19:18:04Z",
-          "pushed": "2026-09-18T21:03:58Z",
-          "branch": "main",
-          "release": null,
-          "readme": true,
-          "shot": "/assets/shots/adab-health-demo.webp"
         }
       ]
     },

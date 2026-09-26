@@ -2,7 +2,8 @@
   "user": "faarisaahmed",
   "exclude": [
     "faarisaahmed.github.io",
-    "python-game"
+    "python-game",
+    "adab-health-demo"
   ],
   "includeForks": false,
   "location": "New Jersey",
@@ -132,14 +133,6 @@
           "tagline": "A nicer, customizable new tab page for your browser",
           "tags": [
             "Productivity"
-          ]
-        },
-        {
-          "name": "adab-health-demo",
-          "title": "AdaB Health Demo",
-          "tagline": "A single-page pitch microsite for AdaB Health, built for investor and partner demos",
-          "tags": [
-            "Microsite"
           ]
         }
       ]
