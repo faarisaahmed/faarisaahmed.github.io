@@ -13,6 +13,24 @@ shares.
   `sv03.5 199`). One-click buttons add a copy in each printing the card exists in (Normal, Holo, Reverse, 1st
   Edition…) in your default condition; click a card for condition (Mint → Damaged), grading company and grade,
   cert number, quantity and price paid. Every add can be undone.
+- **Scan cards** (`/add/scan`) — **live camera** for binders: only the card inside the on-screen outline is
+  read, each match pops up to confirm with one tap, and after an add it waits until the view changes (you moved
+  to the next pocket) before reading again. Or take a photo (or pick a batch) and tap the match. Text is read on the device
+  with Tesseract (served from `/ocr`, copied in by `npm run ocr`); the name and collector number (`199/165`)
+  find the card, and the photo's colours pick between printings of the same name. Photos are never uploaded.
+  An EN / JP switch reads Japanese names with the Japanese model (`public/ocr/jpn.traineddata.gz`, loaded only
+  when chosen). Attack names (fetched from TCGdex GraphQL at ingest, `cards.moves`) identify cards whose titles
+  won't read.
+- **Wishlist** (`/wishlist`) — tap ♡ Want on any card (Add cards, empty binder pockets). Shows today's price,
+  the change since you added it, and flags cards under your target price or down 10%+. "Got it" moves one into
+  the collection.
+- **Trade helper** (`/trade`) — both sides with printing and condition (or grader and grade) per card, valued at
+  market with condition discounts or PSA comps; a fairness bar; "Record trade" takes your copies out and adds
+  what you got.
+- **Sharing** — optional read-only links for a binder (`/s/b/…`) or the whole collection (`/s/c/…`, values
+  optional). Off by default; turning off retires the link. Never shows prices paid, notes or account details.
+- **Price moves** — the dashboard's "This week" lists your biggest risers and fallers. Card prices for anything
+  owned or wanted are recorded daily by `npm run snapshot` (`card_price`), since no free history exists.
 - **Collection** (`/collection`) — every copy with its value, filterable and sortable, editable in place,
   including your own valuation. Identical copies merge into one row with a quantity.
 - **Value** — TCGplayer market prices per printing, refreshed daily. Played cards take a typical TCGplayer
