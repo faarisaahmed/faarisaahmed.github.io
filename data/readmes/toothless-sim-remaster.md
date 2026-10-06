@@ -24,12 +24,36 @@ the pause menu (Journal, Settings, Restart chapter, Save & quit).
 
 ## Graphics
 
-Settings → Graphics. A preset (Auto picks one from the GPU, then Low / Medium /
-High / Ultra), plus each setting on its own: frame-rate limit (30 / 60 /
-unlimited), render resolution (auto or fixed), shadows, terrain detail, forest
-draw distance, grass, water reflections, clouds, glow, and an FPS counter.
+Settings → Graphics. One-click presets along the top — **Auto** (picked from
+the GPU), **Low**, **Medium**, **High**, **Max** (everything up; the Ultra
+preset) — with a **Custom** lamp that lights once you change any single option.
+Under them, each setting on its own, every value shown at once so one click
+picks it: frame-rate limit (30 / 60 / unlimited), render resolution (auto or
+fixed), shadows, terrain detail, forest draw distance, grass, water
+reflections, clouds, glow, and an FPS counter. On a keyboard or pad, up / down
+moves between rows, left / right steps the value (stopping at the ends), and
+Enter / confirm steps forward and wraps round.
+
+Grass is Off / Low / Medium / Ultra. Low is a thin patch round you when you
+land or fly low. Medium is thicker underfoot, plus grass on the meadows out to
+400 m. Ultra carries it out to about 3 km. The far grass is placed on the GPU
+(`js/grassfield.js`), in rings round the camera that get coarser as they go
+out, read off the same height field and vegetation paint as the terrain.
 Everything applies live. For a weak laptop: **Low**, or Medium with shadows off
 and a 30 fps cap.
+
+**Photoreal** (top of Settings → Graphics, or `photoreal on` in the console) is
+the live-action look, and it is heavy. Mountains cast real shadows across the
+valleys, tree tops, roofs and the dragon included, from a shadow map baked off
+the height field on the GPU. Gullies, fjords and cliff feet are dimmed by how
+much sky they can see. Haze lies thicker low down, so the peaks stand clear. The
+slopes are cut with erosion gullies, rock breaks through the turf, and cliffs get
+crag relief at the scale you see them from the air. Each tree gets its own shade
+and a dark inner crown. The camera switches to AgX tone mapping with a light
+sharpen, lens fringing and a softer bloom. Turning it on raises shadows, terrain,
+forest, clouds and reflections to match; turning it off leaves them where they
+are. It all lives in `js/photoreal.js`, plus the `uPR` paths in
+`js/terrainmat.js` and `js/flora.js`.
 
 Clouds are ray-marched volume (`js/clouds.js`) from Medium up — fly into them,
 through them and out on top; Low paints them on the sky instead. Time of day,
@@ -42,6 +66,34 @@ Settings → World (time of day, length of a day, weather). Debug console:
 Terrain detail above Low streams finer ground chunks around the dragon, built on
 Web Workers (`js/terrainlod.js`, `js/terrainworker.js`); Low keeps the single
 13 m sheet and a cheaper ground shader.
+
+## The forest
+
+The trees are the north-Atlantic wood the archipelago is drawn from. The species
+are Norway spruce, Scots pine, silver birch, rowan, sessile oak, juniper, and
+wind pines shorn flat on the exposed headlands. Each one is grown from a seeded
+skeleton of branches and leaf cards (`js/trees.js`), with three to four unique
+variants per species, and each tree is also scaled, turned and tinted on its
+own. Bark, leaves, needles and berries are all painted on canvases at load.
+
+Where they grow is in `js/forest.js`:
+- spruce in the dark fertile valleys
+- pine and birch on the drier slopes
+- oak, birch and rowan in the warm lowland hollows
+- juniper and stunted birch near the treeline
+- wind pines on headlands open to the gale
+
+They grow in stands, not mixed at random.
+
+Each tree has three levels of detail by distance from the camera:
+- **Hero:** every branch and leaf, within about 60–130 m.
+- **Mid:** trunk, limbs and fewer, larger leaves, out to the forest draw
+  distance.
+- **Imposter:** the hero model photographed from the side and from above into
+  an atlas at load, drawn as three cards.
+
+Debug: `window.__na.world.flora.forest.showcase(x, z)` lines every variant up
+in a row.
 
 ## Controls
 
@@ -246,9 +298,28 @@ waypoint there together so the two can never drift apart.
 
 ## Music
 
-Four ambient beds, one per kind of scene: the title, the prologue's one firelit
-room, the open archipelago, and the one story beat where being heard is the
-mechanic. They crossfade, they loop, and `M` mutes.
+An original score, written for this game: six tracks built on two themes, so
+the whole game sounds like one piece of music in six moods. They crossfade,
+they loop seamlessly, and `M` mutes.
+
+- **The Emberwing theme** — the hero's tune. D Dorian, 6/8, its hook a fiddle's
+  open strings thrown up a twelfth and held like a horn call. It turns up dark
+  (Dorian), bright (the same tune in Mixolydian), as a jig, and as a war song.
+- **The Hearth theme** — a slow polska in G with the raised fourth of
+  Norwegian fiddle music, for the small and the warm.
+
+The roots are Scandinavian and Celtic: modal melody, drones, jig and polska
+rhythms, ornamented whistle and fiddle lines (cuts and rolls), a kulning-style
+high call, bodhrán, the pipes used sparingly.
+
+| Track | File | Where |
+| --- | --- | --- |
+| Emberwing (Title) | `emberwing-title.mp3` | Title screen |
+| The Hearth | `the-hearth.mp3` | The prologue |
+| Emberwing (Flight) | `emberwing-flight.mp3` | The archipelago |
+| Emberwing Jig | `emberwing-jig.mp3` | Flying flat out |
+| Emberwing (Raid) | `emberwing-raid.mp3` | The raid |
+| Held Breath | `held-breath.mp3` | Being seen |
 
 Browsers refuse to make a sound until the player has interacted with the page,
 so the first track does not start on load — it starts on your first click or
@@ -258,22 +329,27 @@ In the debug console, `music` prints what is playing, `music <name>` switches to
 it, `music vol <0-1>` sets the level and `music off` stops it. The level and the
 mute survive a reload.
 
+### Rebuilding it
+
+The score is code. `tools/music/score.py` holds the notes, `engine.py` performs
+and mixes them, and
+
+    python3 tools/music/build.py            # all six, ~2-3 minutes
+    python3 tools/music/build.py flight     # just one
+    python3 tools/music/build.py --solo     # the two themes alone, dry
+
+renders every track through fluidsynth with the GeneralUser GS soundfont
+(fetched on first run; it is 32 MB and gitignored), mixes it with a
+convolution hall, EQ, compression and a limiter, and cuts a seamless loop. It
+prints each loop length; those are the `to` values in `js/audio.js`'s `TRACKS`.
+Needs `pip3 install --user mido numpy scipy` and `brew install fluid-synth ffmpeg`.
+
 ### Credits
 
-Music by **[Kevin MacLeod](https://incompetech.com/)** — licensed under
-[Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
-Free of charge and free of royalties; the licence's one condition is this
-credit, so please keep it if you fork this.
-
-| Track | Where |
-| --- | --- |
-| Lightless Dawn | Title screen |
-| Folk Round | The prologue |
-| Windswept | The archipelago |
-| Long Note Two | The rig, and being seen |
-
-The files in `assets/audio/music/` are re-encoded to 96 kbps to keep the repo
-down from 47 MB to 14; the originals are at incompetech.com.
+Music composed for this game. Instruments from the
+[GeneralUser GS](https://github.com/mrbumpy409/GeneralUser-GS) soundfont by
+S. Christian Collins, used under the GeneralUser GS License v2.0 — see
+`assets/audio/music/CREDITS.txt`.
 
 ## Performance
 
