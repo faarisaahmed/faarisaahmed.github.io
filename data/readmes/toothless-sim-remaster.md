@@ -95,6 +95,104 @@ Each tree has three levels of detail by distance from the camera:
 Debug: `window.__na.world.flora.forest.showcase(x, z)` lines every variant up
 in a row.
 
+## The wingbeat
+
+The wingbeat is `js/wings.js` and `js/flightrig.js`.
+
+**It is slow and heavy.** Wingbeat frequency falls with body size: for birds it
+scales roughly as mass to the power −0.27. A 10 kg condor flaps at about
+2.7 Hz, so an animal his size is under 1 Hz:
+
+| | Beats per second |
+| --- | --- |
+| Hovering | about 0.95 |
+| Climbing | about 1.2 |
+| Cruise | about 0.7 |
+| Fast | about 0.6 |
+
+**The wing bends; it doesn't swing.** The shoulder makes a modest stroke and
+the rest travels down the wing as a wave. This is how bat wings move (the wrist
+leads, the tip follows) and how the films animate a dragon's wing.
+- The hand wing lags the arm wing by about a tenth of a beat, and the tip lags
+  further.
+- So the wing cracks down like a whip, still finishing its downstroke at the
+  tip while the arm starts back up.
+- It arches on the recovery and peels up last.
+- The membrane cups under load on the downstroke.
+- The elbow and hand fold it in on the upstroke.
+
+**Flap and glide.** At steady cruise he flaps a few strokes, then glides.
+
+**Body heave.** The body rises on each downstroke.
+
+The wing joint axes were measured on the rig, not guessed. `wingprobe.html`
+shows what each bone and axis does. `flightcheck.html?speed=0&climb=0&view=front|side|q`
+is the test bench: one full beat as a filmstrip.
+
+## Landing and standing
+
+On the ground he's a physical body (`js/groundbody.js`): mass carried on four
+spring-damped legs.
+
+**What he can stand on.** Each leg reaches down to the highest solid thing
+under its foot (`js/surfaces.js`). That means terrain, plus the real geometry
+of every place: hut roofs, decks, crates, cages, the top of the stack. Ray
+tests stay fast thanks to a BVH (`three-mesh-bvh`).
+
+**Coming down.**
+- He flares on the way down: the wings hold most of his weight, he sinks under
+  control, and he sheds forward speed.
+- His legs absorb the touchdown.
+- He runs out whatever speed is left.
+
+**Standing.**
+- His body sets itself to the plane of his footholds, so he tilts along a roof
+  or across a rock.
+- Grip is limited friction. A gentle slope holds him; one too steep for it
+  slides him down.
+- Anything taller than a step stops him.
+
+**Edges.** With two feet or fewer holding him and his weight off them, he tips
+over the edge. After a moment of falling he opens his wings.
+
+
+The walking is built from how big cats and other four-legged animals actually
+move (`js/gait.js`). Toothless was animated from a panther and a dog, and his
+hips are about a metre off the ground.
+
+**Gaits by speed.** Across four-legged animals, the gait changes at set values
+of the Froude number (v²/gh, with h the hip height). The walk gives way to the
+trot at about 0.5, and the trot to the gallop at about 2.5. For him that's a
+walk below about 2 m/s, a trot up to about 5 m/s, and a gallop beyond.
+- **Walk:** each side's hind foot then fore foot steps in turn, with three feet
+  on the ground most of the time, and the head nods.
+- **Trot:** diagonal pairs move together.
+- **Gallop:** a big cat's bounding gallop, with the spine coiling and
+  stretching through each stride.
+
+The movement key is a brisk trot at 4.2 m/s, and sprint is a gallop at
+14 m/s.
+
+**Planted feet.** A foot on the ground stays where it landed, and each leg is
+solved to it with two-bone IK (the hip-to-knee and knee-to-ankle segments are
+rotated so the foot lands exactly on its target). A foot in the air swings to
+where it will be needed next, so steps lengthen with speed and nothing slides.
+
+**Terrain.** Every foot lands on the ground beneath it.
+
+**Body.**
+- He bobs in time with his gait.
+- He leans into turns (lean = v·ω/g).
+- His head holds steady against the motion.
+- His tail swings to counterbalance.
+- When he stops, any foot left out of place takes a last step to settle.
+
+The prologue's walk uses the same system.
+
+`gaitcheck.html?v=4.2` is the test bench: the real rig on a grid, drawn as a
+side-on filmstrip at a fixed time step. Options include `&turn=`, `&slope=`,
+`&view=front|top|q`, and `v=0` to see him standing.
+
 ## Controls
 
 One key, one job. WASD and the arrow keys are the same two axes everywhere —
