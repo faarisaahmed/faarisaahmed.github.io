@@ -129,6 +129,44 @@ The wing joint axes were measured on the rig, not guessed. `wingprobe.html`
 shows what each bone and axis does. `flightcheck.html?speed=0&climb=0&view=front|side|q`
 is the test bench: one full beat as a filmstrip.
 
+## The hunters' pit, up close
+
+**Shape.** The pit is shaped in `js/terrain.js`:
+- The terraces wander rather than forming perfect rings.
+- Risers are cut differently from one another.
+- Talus (fallen rubble) piles at the foot of the risers.
+- The floor rolls gently.
+
+**Ground mesh.** `js/basedetail.js` adds its own ground over the whole pit: a
+1.5 m mesh carrying gentle rock relief and smooth worn tracks. The terrain under
+it is not drawn (`uHole` in `js/terrainmat.js`), so the two never fight. His
+feet stand on this mesh.
+
+**Material.** The ground uses `js/pitmat.js`, built from three photographed
+2K CC0 surfaces from Poly Haven, stored in `assets/textures/pit/`:
+
+| Surface | Texture | Used for |
+| --- | --- | --- |
+| Stony packed ground | `rocks_ground_02` | treads and floor |
+| Angular rubble | `gray_rocks` | the talus banks |
+| Fractured block rock | `dry_riverbed_rock` | the cut faces, triplanar |
+
+- Layers meet by height, so rubble fills the hollows and rock breaks through.
+- Reads are randomised so the photographs never visibly repeat.
+- Everything is tinted to the island's dark basalt.
+
+**Near only.** The rock is only drawn near the camera. Between 70 and 150 m it
+dithers over to the island terrain material (`uHoleFade` / `uFade`): each
+material draws exactly the pixels the other leaves out. From the air, the same
+photograph repeated across the whole pit would read as a grid, while the terrain
+material is built to be seen from far off.
+
+**Clutter is kept sparse:**
+- Pebbles along the track edges.
+- Rocks and a few boulders at the foot of the faces.
+- Occasional tufts, heather and gorse.
+- A handful of puddles on the tracks.
+
 ## Landing and standing
 
 On the ground he's a physical body (`js/groundbody.js`): mass carried on four
@@ -155,6 +193,8 @@ tests stay fast thanks to a BVH (`three-mesh-bvh`).
 **Edges.** With two feet or fewer holding him and his weight off them, he tips
 over the edge. After a moment of falling he opens his wings.
 
+
+## On foot
 
 The walking is built from how big cats and other four-legged animals actually
 move (`js/gait.js`). Toothless was animated from a panther and a dog, and his
@@ -192,6 +232,23 @@ The prologue's walk uses the same system.
 `gaitcheck.html?v=4.2` is the test bench: the real rig on a grid, drawn as a
 side-on filmstrip at a fixed time step. Options include `&turn=`, `&slope=`,
 `&view=front|top|q`, and `v=0` to see him standing.
+
+## Minimap
+
+Top right, in flight and on foot (`js/minimap.js`). It's heading-up and zooms
+out with speed and height.
+
+What it shows:
+- The objective: a ring on the map, or an arrow on the rim when it's off the
+  map.
+- Places he has found.
+- The forest trails into the hunters' pit, dotted.
+- Nearby hunters, each with a tick for the way he faces: white when calm, amber
+  when suspicious, red when alerted.
+- N, E, S and W round the rim.
+- His X, Y and Z underneath.
+
+The full chart is still on Tab.
 
 ## Controls
 
@@ -250,6 +307,19 @@ set the strength, `padsens <n>` and `padsens invert` tune the right stick, and
 `pad` prints the connection state.
 
 ## How fast he is
+
+**Turbo.** Double-tap and hold flat out (or hold sprint with it) to go past the
+canon top speed: through the sound barrier to 1,600 mph (715 m/s). It winds up
+over a few seconds. The speeds are honest: the HUD reads what he actually
+covers, measured at 335 m/s flat out and about 710 m/s in turbo.
+
+**Seeing speed.** At altitude over open sea, nothing near the camera moves, so
+any speed looks slow. `js/speedfx.js` adds:
+- Streaks of air fixed in the world around the camera. They pass at his true
+  speed, from about 200 mph up.
+- A vapour cone past Mach 1.
+- A shock ring, a thump and a camera shake at the moment he crosses it.
+- An FOV punch in turbo.
 
 The numbers are the franchise's rather than invented. DreamWorks publish the
 Night Fury at 26 ft long and 45 ft across the wings — 7.9 m and 13.7 m — and the
@@ -394,6 +464,83 @@ the compound's position is hardcoded: `main.js` sweeps the bowl at load, finds
 the flattest patch that will take the deck, and puts the fort and the story
 waypoint there together so the two can never drift apart.
 
+### Getting in unseen
+
+Flying in over the open pit gets him seen: every tower is watching that sky.
+The way in is on foot, down one of three old spoil gullies, now grown over.
+
+**The gullies** (`pitPaths` in `js/terrain.js`):
+- **South:** from the plateau behind the southern rim to the stores stacked
+  against the yard fence.
+- **East:** a gorge through the eastern ridge, down to the cranes and the back
+  of the cage ring.
+- **North:** from the headland across the channel, down behind the workshop.
+
+Each one starts in the woods outside the rim. Land there, then trot down about
+700 m to the yard fence. The fence is broken where each gully comes out.
+
+How they are built:
+- **Floor:** a smoothed centre line with a floor profile. It never runs steeper
+  than 14°, and it stays at least 5 m below the ground on either side. Where the
+  terraces fall faster than that, the cut goes deeper instead of steeper. The
+  banks widen as the cut deepens, so a shallow cut is a ditch and a deep one is a
+  gorge.
+- **Trees:** `fertility()` reads `pitWood`, so the forest plants the gullies
+  thick with its own species.
+- **Undergrowth:** `js/pitwood.js` adds ferns, tall grass, bushes, mossy fallen
+  trunks and sunbeams through the canopy. It leaves a trail open down the middle.
+  Plants are placed at load but only built into meshes when the camera comes
+  near.
+- **Ground:** `pitmat.js` turns the quarry rock to leaf litter and moss.
+- **Buildings:** nothing in `hunterbase.js` is built in a gully or on its lip.
+
+**The guards** (`js/hunters.js`):
+- **What they can see.** A guard sees about 50° either side of where he faces,
+  catches movement out to about 70°, and is blind behind. He seldom looks up.
+- **What blocks the view.** His line of sight is tested against the ground, the
+  buildings (a raycast against the same BVH meshes the feet use) and the wood.
+  Trunks and crowns thin the view the further it passes through them.
+- **What helps him.** Light helps, and so does size: a dragon flying with his
+  wings spread against the sky is seen from far off. Moving helps too. On foot,
+  standing still, he is hard to spot.
+- **Hearing.** A gallop is heard about 35 m away, and a trot about 7 m away.
+  Hard wingbeats are heard 120 m away.
+- **Suspicion builds over time.** What a guard sees fills a meter. It fills
+  quickly when the dragon is close and out in the open, and slowly when he is
+  far or half hidden. It drains when nothing is seen.
+
+What a guard does:
+1. **Suspicious.** He stops and turns toward what he noticed, and a "?" fills
+   over his head.
+2. **Investigates.** He walks to where it *was*, not to where the dragon is now.
+3. **Searches.** He looks around for a few seconds.
+4. **Gives up.** He goes back to work.
+5. **Alert.** If his meter fills while he can still see the dragon, the "?"
+   turns into "!". He shouts, everyone within 150 m comes to look, the archers
+   shoot, and the story's alarm goes up.
+
+Guards are dim on purpose:
+- They give up quickly.
+- They don't look up.
+- A plasma blast is a noise. Everyone within 110 m who isn't already alert
+  goes to look at the impact point, not at him. Use it to pull a guard off his
+  post.
+
+While he is on foot or aiming, faint fans on the ground show which way the
+nearby guards face. They are pale for calm, amber for suspicious and red for
+alert.
+
+Headless test runs, at day (09:00) and in mission one's dusk (20:40, overcast):
+- **On foot, all three gullies:** walked from outside the rim to the fence. No
+  guard's meter moved.
+- **Mission one, on foot:** "Get a look at the cages" completed without an
+  alarm.
+- **Into the open yard:** the first "?" came after about 6 s, and "!" after
+  about 9 s.
+- **Flying straight in:** seen after 9–10 s, before reaching the cages, and the
+  beat did not complete.
+- **A blast near a guard:** he walked from 32 m to 5 m of the impact point.
+
 ## Music
 
 An original score, written for this game: six tracks built on two themes, so
@@ -487,6 +634,20 @@ exports that are a public API with live callers, the units contract, which sites
 cannot move, the performance budgets above, and how to verify before handing
 back. [`DESIGN_NOTES.md`](DESIGN_NOTES.md) has the research behind the mission
 and cutscene design.
+
+## The archipelago
+
+Ten kilometres square, modelled on the Faroes, the Hebrides and western Norway:
+fewer, bigger islands than it started with, sized like somewhere a village or a
+wood could stand. Berk is the biggest, four kilometres of fjord country with a
+sound bitten into its west side and a sea loch into its east; Berserker, Outcast,
+Raven Point and Glacier Island are not far short of it, and the rest are one to
+two kilometres across. They lie in groups, close enough in places that the
+water between them is a strait, with open water kept south of Berk and down the
+middle. About 37% of the chart is land, and a handful of skerries stand off the
+coasts as bare rock. Big islands are built from several bodies run together
+(`parts`) and cut with drowned valleys (`fjords`), both in `js/terrain.js`;
+[`ARCHIPELAGO.md`](ARCHIPELAGO.md) has the detail.
 
 ## The chart
 
