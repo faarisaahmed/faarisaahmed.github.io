@@ -14,12 +14,12 @@
     "It's all open source. Browse the projects to read about each one, or go straight to the live sites and try them."
   ],
   "pinned": [
+    "music-sequencer",
     "trading-competition",
     "toothless-sim-remaster",
-    "super-mario-bros-rl-model",
-    "song-sampler",
-    "object-tracker",
-    "hide-and-go-seek"
+    "star-wars-archive",
+    "hide-and-go-seek",
+    "multicam"
   ],
   "groups": [
     {
@@ -134,6 +134,29 @@
       "icon": "globe",
       "projects": [
         {
+          "name": "music-sequencer",
+          "title": "BandForge",
+          "tagline": "A GarageBand-style music studio in the browser: tracks, piano roll, drum sequencer, sheet music and mixing",
+          "description": "BandForge: a GarageBand-style music studio in the browser with tracks, piano roll, drum sequencer, score editor, recording and MP3 export",
+          "tags": [
+            "Audio",
+            "Music"
+          ],
+          "url": "https://github.com/faarisaahmed/music-sequencer",
+          "live": "https://faarisaahmed.github.io/music-sequencer/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "TypeScript",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-10-10T01:26:24Z",
+          "pushed": "2026-10-10T13:51:57Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
+          "shot": "/assets/shots/music-sequencer.webp"
+        },
+        {
           "name": "object-tracker",
           "title": "Object Tracker",
           "tagline": "Reframe video to any aspect ratio by keyframing where the subject is, all in one HTML file",
@@ -229,6 +252,29 @@
           "shot": null
         },
         {
+          "name": "holovault",
+          "title": "Shadowless",
+          "tagline": "Know what your Pokémon TCG collection is worth: printings, conditions, grades and binder planning",
+          "description": "Shadowless — know what your Pokémon TCG collection is worth. Printings, conditions, grades, grading calls, master sets and binder planning.",
+          "tags": [
+            "Data",
+            "Collection"
+          ],
+          "url": "https://github.com/faarisaahmed/holovault",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "TypeScript",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-28T21:57:26Z",
+          "pushed": "2026-09-29T23:00:06Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
+          "shot": null
+        },
+        {
           "name": "star-wars-archive",
           "title": "Star Wars Archive",
           "tagline": "Every canon Star Wars film and show, in order",
@@ -298,7 +344,7 @@
           "stars": 0,
           "forks": 0,
           "created": "2026-09-18T01:10:59Z",
-          "pushed": "2026-10-10T12:37:20Z",
+          "pushed": "2026-10-10T13:57:49Z",
           "branch": "main",
           "release": null,
           "readme": true,
@@ -709,6 +755,52 @@
           "shot": null
         },
         {
+          "name": "pocket-runner",
+          "title": "Pocket Runner",
+          "tagline": "Code from Claude on your phone, then run it on GitHub Pages and Actions",
+          "description": "Code from Claude on your phone, run it on GitHub Pages",
+          "tags": [
+            "Mobile",
+            "Pages"
+          ],
+          "url": "https://github.com/faarisaahmed/pocket-runner",
+          "live": "https://faarisaahmed.github.io/pocket-runner/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "HTML",
+          "stars": 1,
+          "forks": 0,
+          "created": "2026-09-30T23:51:15Z",
+          "pushed": "2026-10-02T00:44:18Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
+          "shot": "/assets/shots/pocket-runner.webp"
+        },
+        {
+          "name": "festival-star",
+          "title": "The Festival Star",
+          "tagline": "A five-minute procedural 3D Pokémon short film, built and rendered entirely with Python in Blender",
+          "description": "A 5-minute procedural 3D Pokémon short film made entirely with Blender Python scripts (code only - bring your own models)",
+          "tags": [
+            "Blender",
+            "Film"
+          ],
+          "url": "https://github.com/faarisaahmed/festival-star",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "Python",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-09-26T17:19:13Z",
+          "pushed": "2026-10-02T22:17:02Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
+          "shot": null
+        },
+        {
           "name": "morse-keyboard",
           "title": "Morse Keyboard",
           "tagline": "A system-wide iOS keyboard that types raw Morse code",
@@ -746,7 +838,7 @@
           "stars": 0,
           "forks": 0,
           "created": "2026-08-22T16:32:38Z",
-          "pushed": "2026-08-22T16:36:18Z",
+          "pushed": "2026-10-10T14:00:19Z",
           "branch": "main",
           "release": null,
           "readme": true,
@@ -772,95 +864,6 @@
           "branch": "main",
           "release": null,
           "readme": false,
-          "shot": null
-        }
-      ]
-    },
-    {
-      "id": "more",
-      "title": "More Projects",
-      "blurb": "Everything else.",
-      "accent": "#c9ced6",
-      "icon": "spark",
-      "projects": [
-        {
-          "name": "music-sequencer",
-          "title": "music-sequencer",
-          "tagline": "BandForge: a GarageBand-style music studio in the browser with tracks, piano roll, drum sequencer, score editor, recording and MP3 export",
-          "description": "BandForge: a GarageBand-style music studio in the browser with tracks, piano roll, drum sequencer, score editor, recording and MP3 export",
-          "tags": [],
-          "url": "https://github.com/faarisaahmed/music-sequencer",
-          "live": "https://faarisaahmed.github.io/music-sequencer/",
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "TypeScript",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-10-10T01:26:24Z",
-          "pushed": "2026-10-10T03:16:36Z",
-          "branch": "main",
-          "release": null,
-          "readme": true,
-          "shot": null
-        },
-        {
-          "name": "festival-star",
-          "title": "festival-star",
-          "tagline": "A 5-minute procedural 3D Pokémon short film made entirely with Blender Python scripts (code only - bring your own models)",
-          "description": "A 5-minute procedural 3D Pokémon short film made entirely with Blender Python scripts (code only - bring your own models)",
-          "tags": [],
-          "url": "https://github.com/faarisaahmed/festival-star",
-          "live": null,
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "Python",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-09-26T17:19:13Z",
-          "pushed": "2026-10-02T22:17:02Z",
-          "branch": "main",
-          "release": null,
-          "readme": true,
-          "shot": null
-        },
-        {
-          "name": "pocket-runner",
-          "title": "pocket-runner",
-          "tagline": "Code from Claude on your phone, run it on GitHub Pages",
-          "description": "Code from Claude on your phone, run it on GitHub Pages",
-          "tags": [],
-          "url": "https://github.com/faarisaahmed/pocket-runner",
-          "live": "https://faarisaahmed.github.io/pocket-runner/",
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "HTML",
-          "stars": 1,
-          "forks": 0,
-          "created": "2026-09-30T23:51:15Z",
-          "pushed": "2026-10-02T00:44:18Z",
-          "branch": "main",
-          "release": null,
-          "readme": true,
-          "shot": null
-        },
-        {
-          "name": "holovault",
-          "title": "holovault",
-          "tagline": "Shadowless — know what your Pokémon TCG collection is worth. Printings, conditions, grades, grading calls, master sets and binder planning.",
-          "description": "Shadowless — know what your Pokémon TCG collection is worth. Printings, conditions, grades, grading calls, master sets and binder planning.",
-          "tags": [],
-          "url": "https://github.com/faarisaahmed/holovault",
-          "live": null,
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "TypeScript",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-09-28T21:57:26Z",
-          "pushed": "2026-09-29T23:00:06Z",
-          "branch": "main",
-          "release": null,
-          "readme": true,
           "shot": null
         }
       ]

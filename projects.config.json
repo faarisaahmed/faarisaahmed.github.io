@@ -13,12 +13,12 @@
     "It's all open source. Browse the projects to read about each one, or go straight to the live sites and try them."
   ],
   "pinned": [
+    "music-sequencer",
     "trading-competition",
     "toothless-sim-remaster",
-    "super-mario-bros-rl-model",
-    "song-sampler",
-    "object-tracker",
-    "hide-and-go-seek"
+    "star-wars-archive",
+    "hide-and-go-seek",
+    "multicam"
   ],
   "groups": [
     {
@@ -80,6 +80,15 @@
       "icon": "globe",
       "repos": [
         {
+          "name": "music-sequencer",
+          "title": "BandForge",
+          "tagline": "A GarageBand-style music studio in the browser: tracks, piano roll, drum sequencer, sheet music and mixing",
+          "tags": [
+            "Audio",
+            "Music"
+          ]
+        },
+        {
           "name": "object-tracker",
           "title": "Object Tracker",
           "tagline": "Reframe video to any aspect ratio by keyframing where the subject is, all in one HTML file",
@@ -117,6 +126,15 @@
           "tagline": "Prices and pull rates for every English and Japanese Pokémon TCG set",
           "tags": [
             "Data"
+          ]
+        },
+        {
+          "name": "holovault",
+          "title": "Shadowless",
+          "tagline": "Know what your Pokémon TCG collection is worth: printings, conditions, grades and binder planning",
+          "tags": [
+            "Data",
+            "Collection"
           ]
         },
         {
@@ -309,6 +327,24 @@
           "tags": [
             "Library",
             "FFmpeg"
+          ]
+        },
+        {
+          "name": "pocket-runner",
+          "title": "Pocket Runner",
+          "tagline": "Code from Claude on your phone, then run it on GitHub Pages and Actions",
+          "tags": [
+            "Mobile",
+            "Pages"
+          ]
+        },
+        {
+          "name": "festival-star",
+          "title": "The Festival Star",
+          "tagline": "A five-minute procedural 3D Pokémon short film, built and rendered entirely with Python in Blender",
+          "tags": [
+            "Blender",
+            "Film"
           ]
         },
         {
