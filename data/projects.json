@@ -344,7 +344,7 @@
           "stars": 0,
           "forks": 0,
           "created": "2026-09-18T01:10:59Z",
-          "pushed": "2026-10-12T15:33:18Z",
+          "pushed": "2026-10-13T14:14:43Z",
           "branch": "main",
           "release": null,
           "readme": true,
@@ -864,6 +864,35 @@
           "branch": "main",
           "release": null,
           "readme": false,
+          "shot": null
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "title": "More Projects",
+      "blurb": "Everything else.",
+      "accent": "#c9ced6",
+      "icon": "spark",
+      "projects": [
+        {
+          "name": "unstrung",
+          "title": "unstrung",
+          "tagline": "UNSTRUNG — a hand-inked metroidvania about a tiny rolling bead. Plays in the browser.",
+          "description": "UNSTRUNG — a hand-inked metroidvania about a tiny rolling bead. Plays in the browser.",
+          "tags": [],
+          "url": "https://github.com/faarisaahmed/unstrung",
+          "live": "https://faarisaahmed.github.io/unstrung/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "JavaScript",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-10-12T22:53:51Z",
+          "pushed": "2026-10-13T02:27:58Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
           "shot": null
         }
       ]
