@@ -5,7 +5,7 @@
     "bio": "i like coding :)",
     "location": "New Jersey",
     "url": "https://github.com/faarisaahmed",
-    "followers": 8,
+    "followers": 9,
     "since": "2022-01-17T15:49:39Z"
   },
   "about": [
@@ -875,6 +875,26 @@
       "accent": "#c9ced6",
       "icon": "spark",
       "projects": [
+        {
+          "name": "wordle-image",
+          "title": "wordle-image",
+          "tagline": "Paint a picture with Wordle tiles and get the guesses that draw it",
+          "description": "Paint a picture with Wordle tiles and get the guesses that draw it",
+          "tags": [],
+          "url": "https://github.com/faarisaahmed/wordle-image",
+          "live": "https://faarisaahmed.github.io/wordle-image/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "JavaScript",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-10-19T22:13:52Z",
+          "pushed": "2026-10-20T04:53:04Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
+          "shot": null
+        },
         {
           "name": "monsoon",
           "title": "monsoon",
