@@ -11,7 +11,7 @@ Three pages share one nav: **About** (`/`), **Projects** (`/projects/`) and **Li
 - `projects.config.json`: the about-me text, the pinned projects, the groups and their order, and a short tagline and tags for each repo. Any new public repo that isn't listed shows up automatically under **More Projects** until you place it.
 - `scripts/build.py` pulls repo metadata, GitHub Pages URLs, latest releases and READMEs from the GitHub API into `data/`.
 - A GitHub Action (`.github/workflows/refresh.yml`) re-runs the build every day, and whenever the config changes, so the site stays in sync.
-- `scripts/screenshots.mjs` captures the preview images on the Live page into `assets/shots/`. It's run by hand (a new deployment shows a styled placeholder until you do), then re-run `build.py`.
+- `scripts/screenshots.mjs` captures the cover images (on pinned cards and the Live page) into `assets/shots/`. The daily Action runs it with `--missing`, so any new deployment gets a cover automatically. Re-run it by hand for a specific repo to refresh an old cover, then re-run `build.py`.
 - The site is plain HTML/CSS/JS with no build step: `index.html`, `projects/`, `live/`, `assets/css/site.css`, `assets/js/site.js`.
 
 ## Local preview

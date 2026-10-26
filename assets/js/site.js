@@ -125,6 +125,9 @@
     return `
       <article class="card spot in-view" style="--accent:${p.group.accent};--i:${i}">
         <button class="card-hit" type="button" data-readme="${esc(p.name)}" aria-label="Open ${esc(p.title)}"></button>
+        <div class="card-cover">
+          ${p.shot ? `<img src="${esc(p.shot)}" alt="" loading="lazy" decoding="async">` : `<span class="shot-fallback">${esc(p.title[0])}</span>`}
+        </div>
         <div class="card-top">
           <span class="card-group">${esc(p.group.title)}</span>
           ${isLive(p) ? '<span class="badge badge-live">Live</span>' : ""}

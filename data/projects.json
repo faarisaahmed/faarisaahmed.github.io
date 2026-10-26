@@ -5,7 +5,7 @@
     "bio": "i like coding :)",
     "location": "New Jersey",
     "url": "https://github.com/faarisaahmed",
-    "followers": 9,
+    "followers": 10,
     "since": "2022-01-17T15:49:39Z"
   },
   "about": [
@@ -15,8 +15,10 @@
   ],
   "pinned": [
     "music-sequencer",
+    "monsoon",
     "trading-competition",
     "toothless-sim-remaster",
+    "Alternative-NewTab",
     "star-wars-archive",
     "hide-and-go-seek",
     "multicam"
@@ -51,6 +53,29 @@
           "release": null,
           "readme": true,
           "shot": "/assets/shots/toothless-sim-remaster.webp"
+        },
+        {
+          "name": "unstrung",
+          "title": "UNSTRUNG",
+          "tagline": "A hand-inked metroidvania about a tiny rolling bead: 19 areas, 33 bosses, plays in the browser",
+          "description": "UNSTRUNG — a hand-inked metroidvania about a tiny rolling bead. Plays in the browser.",
+          "tags": [
+            "Metroidvania",
+            "Browser"
+          ],
+          "url": "https://github.com/faarisaahmed/unstrung",
+          "live": "https://faarisaahmed.github.io/unstrung/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "JavaScript",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-10-12T22:53:51Z",
+          "pushed": "2026-10-13T22:12:26Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
+          "shot": "/assets/shots/unstrung.webp"
         },
         {
           "name": "hide-and-go-seek",
@@ -317,6 +342,52 @@
           "release": null,
           "readme": true,
           "shot": "/assets/shots/Alternative-NewTab.webp"
+        },
+        {
+          "name": "wordle-image",
+          "title": "Wordle Painter",
+          "tagline": "Paint a picture with Wordle tiles and get the guesses that draw it",
+          "description": "Paint a picture with Wordle tiles and get the guesses that draw it",
+          "tags": [
+            "Wordle",
+            "Puzzle"
+          ],
+          "url": "https://github.com/faarisaahmed/wordle-image",
+          "live": "https://faarisaahmed.github.io/wordle-image/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "JavaScript",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-10-19T22:13:52Z",
+          "pushed": "2026-10-25T04:43:09Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
+          "shot": "/assets/shots/wordle-image.webp"
+        },
+        {
+          "name": "mc2",
+          "title": "MasjidHub",
+          "tagline": "Prayer times, Qibla, events and a map of nearby mosques, all in one simple site",
+          "description": "Thing for stuff",
+          "tags": [
+            "Community",
+            "Prayer times"
+          ],
+          "url": "https://github.com/faarisaahmed/mc2",
+          "live": "https://faarisaahmed.github.io/mc2/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "HTML",
+          "stars": 1,
+          "forks": 0,
+          "created": "2026-10-24T19:57:47Z",
+          "pushed": "2026-10-25T15:21:25Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
+          "shot": "/assets/shots/mc2.webp"
         }
       ]
     },
@@ -632,6 +703,52 @@
       "icon": "book",
       "projects": [
         {
+          "name": "monsoon",
+          "title": "Monsoon",
+          "tagline": "A calm, complete course for 14 languages of South Asia: script, pronunciation, grammar and reading, with audio for everything",
+          "description": "A calm, complete course for the major languages of South Asia: script, pronunciation, vocabulary, grammar, reading and practice — with audio for everything.",
+          "tags": [
+            "Languages",
+            "Audio"
+          ],
+          "url": "https://github.com/faarisaahmed/monsoon",
+          "live": "https://faarisaahmed.github.io/monsoon/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "JavaScript",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-10-14T21:07:38Z",
+          "pushed": "2026-10-22T22:30:45Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
+          "shot": "/assets/shots/monsoon.webp"
+        },
+        {
+          "name": "sat-vocab",
+          "title": "SAT Vocab",
+          "tagline": "Flashcards for Barron's SAT vocab, numbered to match the physical cards",
+          "description": "",
+          "tags": [
+            "Flashcards",
+            "SAT"
+          ],
+          "url": "https://github.com/faarisaahmed/sat-vocab",
+          "live": "https://faarisaahmed.github.io/sat-vocab/",
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "JavaScript",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-10-24T02:29:10Z",
+          "pushed": "2026-10-24T13:07:31Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
+          "shot": "/assets/shots/sat-vocab.webp"
+        },
+        {
           "name": "pikachu",
           "title": "Git Foundations",
           "tagline": "A three-part starter course: create a repo, deploy it to Pages, collaborate with a team",
@@ -864,115 +981,6 @@
           "branch": "main",
           "release": null,
           "readme": false,
-          "shot": null
-        }
-      ]
-    },
-    {
-      "id": "more",
-      "title": "More Projects",
-      "blurb": "Everything else.",
-      "accent": "#c9ced6",
-      "icon": "spark",
-      "projects": [
-        {
-          "name": "wordle-image",
-          "title": "wordle-image",
-          "tagline": "Paint a picture with Wordle tiles and get the guesses that draw it",
-          "description": "Paint a picture with Wordle tiles and get the guesses that draw it",
-          "tags": [],
-          "url": "https://github.com/faarisaahmed/wordle-image",
-          "live": "https://faarisaahmed.github.io/wordle-image/",
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "JavaScript",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-10-19T22:13:52Z",
-          "pushed": "2026-10-25T04:43:09Z",
-          "branch": "main",
-          "release": null,
-          "readme": true,
-          "shot": null
-        },
-        {
-          "name": "mc2",
-          "title": "mc2",
-          "tagline": "Thing for stuff",
-          "description": "Thing for stuff",
-          "tags": [],
-          "url": "https://github.com/faarisaahmed/mc2",
-          "live": "https://faarisaahmed.github.io/mc2/",
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "HTML",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-10-24T19:57:47Z",
-          "pushed": "2026-10-25T01:23:12Z",
-          "branch": "main",
-          "release": null,
-          "readme": true,
-          "shot": null
-        },
-        {
-          "name": "sat-vocab",
-          "title": "sat-vocab",
-          "tagline": "",
-          "description": "",
-          "tags": [],
-          "url": "https://github.com/faarisaahmed/sat-vocab",
-          "live": "https://faarisaahmed.github.io/sat-vocab/",
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "JavaScript",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-10-24T02:29:10Z",
-          "pushed": "2026-10-24T13:07:31Z",
-          "branch": "main",
-          "release": null,
-          "readme": true,
-          "shot": null
-        },
-        {
-          "name": "monsoon",
-          "title": "monsoon",
-          "tagline": "A calm, complete course for the major languages of South Asia: script, pronunciation, vocabulary, grammar, reading and practice — with audio for everything.",
-          "description": "A calm, complete course for the major languages of South Asia: script, pronunciation, vocabulary, grammar, reading and practice — with audio for everything.",
-          "tags": [],
-          "url": "https://github.com/faarisaahmed/monsoon",
-          "live": "https://faarisaahmed.github.io/monsoon/",
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "JavaScript",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-10-14T21:07:38Z",
-          "pushed": "2026-10-22T22:30:45Z",
-          "branch": "main",
-          "release": null,
-          "readme": true,
-          "shot": null
-        },
-        {
-          "name": "unstrung",
-          "title": "unstrung",
-          "tagline": "UNSTRUNG — a hand-inked metroidvania about a tiny rolling bead. Plays in the browser.",
-          "description": "UNSTRUNG — a hand-inked metroidvania about a tiny rolling bead. Plays in the browser.",
-          "tags": [],
-          "url": "https://github.com/faarisaahmed/unstrung",
-          "live": "https://faarisaahmed.github.io/unstrung/",
-          "liveLabel": "Live site",
-          "links": [],
-          "language": "JavaScript",
-          "stars": 0,
-          "forks": 0,
-          "created": "2026-10-12T22:53:51Z",
-          "pushed": "2026-10-13T22:12:26Z",
-          "branch": "main",
-          "release": null,
-          "readme": true,
           "shot": null
         }
       ]

@@ -5,7 +5,7 @@ on:
     - cron: "17 6 * * *"
   workflow_dispatch:
   push:
-    paths: ["projects.config.json", "scripts/build.py"]
+    paths: ["projects.config.json", "scripts/build.py", "scripts/screenshots.mjs"]
 
 permissions:
   contents: write
@@ -22,9 +22,20 @@ jobs:
         run: python3 scripts/build.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Capture covers for new live sites
+        run: |
+          npm i --no-save puppeteer-core
+          node scripts/screenshots.mjs --missing
+          if [ -n "$(git status --porcelain assets/shots)" ]; then python3 scripts/build.py; fi
+        env:
+          CHROME: /usr/bin/google-chrome
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit changes
         run: |
-          git add -A data
+          git add -A data assets/shots
           if git diff --cached --quiet; then
             echo "No changes"
           else

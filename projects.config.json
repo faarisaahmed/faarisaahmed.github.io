@@ -14,8 +14,10 @@
   ],
   "pinned": [
     "music-sequencer",
+    "monsoon",
     "trading-competition",
     "toothless-sim-remaster",
+    "Alternative-NewTab",
     "star-wars-archive",
     "hide-and-go-seek",
     "multicam"
@@ -34,6 +36,15 @@
           "tagline": "Fly a dragon across an open archipelago, a heavily upgraded remaster of the original",
           "tags": [
             "3D",
+            "Browser"
+          ]
+        },
+        {
+          "name": "unstrung",
+          "title": "UNSTRUNG",
+          "tagline": "A hand-inked metroidvania about a tiny rolling bead: 19 areas, 33 bosses, plays in the browser",
+          "tags": [
+            "Metroidvania",
             "Browser"
           ]
         },
@@ -151,6 +162,24 @@
           "tagline": "A nicer, customizable new tab page for your browser",
           "tags": [
             "Productivity"
+          ]
+        },
+        {
+          "name": "wordle-image",
+          "title": "Wordle Painter",
+          "tagline": "Paint a picture with Wordle tiles and get the guesses that draw it",
+          "tags": [
+            "Wordle",
+            "Puzzle"
+          ]
+        },
+        {
+          "name": "mc2",
+          "title": "MasjidHub",
+          "tagline": "Prayer times, Qibla, events and a map of nearby mosques, all in one simple site",
+          "tags": [
+            "Community",
+            "Prayer times"
           ]
         }
       ]
@@ -279,6 +308,24 @@
       "accent": "#f0d38a",
       "icon": "book",
       "repos": [
+        {
+          "name": "monsoon",
+          "title": "Monsoon",
+          "tagline": "A calm, complete course for 14 languages of South Asia: script, pronunciation, grammar and reading, with audio for everything",
+          "tags": [
+            "Languages",
+            "Audio"
+          ]
+        },
+        {
+          "name": "sat-vocab",
+          "title": "SAT Vocab",
+          "tagline": "Flashcards for Barron's SAT vocab, numbered to match the physical cards",
+          "tags": [
+            "Flashcards",
+            "SAT"
+          ]
+        },
         {
           "name": "pikachu",
           "title": "Git Foundations",
