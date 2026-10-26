@@ -429,9 +429,11 @@
   /* ---------- Live page ---------- */
   function pageLive() {
     const pinnedSet = new Set(data.pinned);
+    // Pinned first, in the order they're pinned, then everything else by most recent.
+    const pinRank = (p) => (pinnedSet.has(p.name) ? data.pinned.indexOf(p.name) : Infinity);
     const deployments = all()
       .filter(isLive)
-      .sort((a, b) => (pinnedSet.has(b.name) - pinnedSet.has(a.name)) || b.pushed.localeCompare(a.pushed));
+      .sort((a, b) => (pinRank(a) - pinRank(b)) || b.pushed.localeCompare(a.pushed));
     $("#count").textContent = deployments.length;
 
     const groupsWithLive = data.groups.filter((g) => deployments.some((p) => p.group.id === g.id));
