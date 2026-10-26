@@ -34,9 +34,9 @@ const prep = {
       ["Reddit", "reddit.com"], ["Wikipedia", "wikipedia.org"], ["Maps", "maps.google.com"], ["Spotify", "spotify.com"],
     ];
     const layout = [
-      { type: "clock", x: 6, y: 2, w: 2, h: 2 },
-      { type: "search-bar", x: 5, y: 4, w: 4, h: 1 },
-      ...sites.map(([name, host], i) => ({ type: "link-small", x: 3 + i, y: 5, w: 1, h: 1, name, url: `https://${host}` })),
+      { type: "search-bar", x: 5, y: 3, w: 4, h: 1 },
+      ...sites.map(([name, host], i) => ({ type: "link-small", x: 3 + i, y: 4, w: 1, h: 1, name, url: `https://${host}` })),
+      { type: "clock", x: 6, y: 5, w: 2, h: 2 },
     ];
     await page.evaluate((wallpaper, layout) => {
       localStorage.setItem("wallpaperImage", wallpaper);
