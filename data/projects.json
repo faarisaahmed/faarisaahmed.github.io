@@ -313,7 +313,7 @@
           "stars": 0,
           "forks": 0,
           "created": "2026-07-11T19:21:19Z",
-          "pushed": "2026-09-18T21:04:30Z",
+          "pushed": "2026-10-27T10:34:55Z",
           "branch": "main",
           "release": null,
           "readme": true,
@@ -358,7 +358,7 @@
           "stars": 0,
           "forks": 0,
           "created": "2026-10-19T22:13:52Z",
-          "pushed": "2026-10-26T04:49:05Z",
+          "pushed": "2026-10-27T05:07:29Z",
           "branch": "main",
           "release": null,
           "readme": true,
@@ -368,7 +368,7 @@
           "name": "mc2",
           "title": "MasjidHub",
           "tagline": "Prayer times, Qibla, events and a map of nearby mosques, all in one simple site",
-          "description": "Thing for stuff",
+          "description": "Prayer times, Qibla, events for every age, an AI day planner, and nearby mosques in one simple site, built around the Muslim Center of Greater Princeton.",
           "tags": [
             "Community",
             "Prayer times"
@@ -381,7 +381,7 @@
           "stars": 1,
           "forks": 0,
           "created": "2026-10-24T19:57:47Z",
-          "pushed": "2026-10-25T15:21:25Z",
+          "pushed": "2026-10-26T20:59:18Z",
           "branch": "main",
           "release": null,
           "readme": true,
@@ -979,6 +979,55 @@
           "branch": "main",
           "release": null,
           "readme": false,
+          "shot": null
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "title": "More Projects",
+      "blurb": "Everything else.",
+      "accent": "#c9ced6",
+      "icon": "spark",
+      "projects": [
+        {
+          "name": "silknx",
+          "title": "silknx",
+          "tagline": "Run PC (BepInEx) Hollow Knight: Silksong mods on the Switch version (Ryujinx / Atmosphere)",
+          "description": "Run PC (BepInEx) Hollow Knight: Silksong mods on the Switch version (Ryujinx / Atmosphere)",
+          "tags": [],
+          "url": "https://github.com/faarisaahmed/silknx",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "Python",
+          "stars": 1,
+          "forks": 0,
+          "created": "2026-10-26T23:33:45Z",
+          "pushed": "2026-10-27T08:18:22Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
+          "shot": null
+        },
+        {
+          "name": "claude-duet-fork",
+          "title": "claude-duet-fork",
+          "tagline": "A self-hosted, open-source take on a proactive AI agent: watches your apps and Claude Code setup, briefs you every morning, and asks before it acts. Server + native iOS app.",
+          "description": "A self-hosted, open-source take on a proactive AI agent: watches your apps and Claude Code setup, briefs you every morning, and asks before it acts. Server + native iOS app.",
+          "tags": [],
+          "url": "https://github.com/faarisaahmed/claude-duet-fork",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "TypeScript",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-10-26T21:16:48Z",
+          "pushed": "2026-10-26T21:25:30Z",
+          "branch": "main",
+          "release": null,
+          "readme": true,
           "shot": null
         }
       ]
