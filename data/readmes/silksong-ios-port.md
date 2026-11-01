@@ -13,6 +13,18 @@ Short version:
 
 The rest of this file goes through everything step by step. If you've never done this kind of thing before, read it top to bottom once before starting.
 
+### Common questions
+
+**Do I need the PC version?** Yes. Everything is built from the Windows files of Silksong (Steam or GOG), even if you only want to play on iPhone. The Switch, PlayStation or Xbox versions can't be used.
+
+**Can I add mods to an IPA someone else made?** No. Inside an IPA the game's code is already compiled for iPhone, so there's nothing left for mod DLLs to hook into. Mods have to be added while building, on a Mac that has done `./setup` with the PC game files. If you don't have a Mac, ask someone who has one set up to run `./build` with your `BepInEx` folder and send you the IPA.
+
+**Can I drop mods into the Files app on my phone?** Not for code mods. iOS doesn't let apps load new code after they're installed. Mod settings (`.cfg`) and the files mods read (PNGs, sounds, text) can be changed on the phone, see [On the phone](#on-the-phone).
+
+**What do I need for a modded IPA, in short?** A Mac with Xcode, the PC game files, and the mods' normal PC (BepInEx 5) downloads in `BepInEx/plugins/`. Then `./setup` once and `./build` each time you change mods.
+
+**Do I need to rebuild for every mod change?** Yes, run `./build` again (about 25 minutes) and reinstall the IPA. Your saves stay.
+
 ---
 
 ## What you need
@@ -206,6 +218,7 @@ If a mod mostly works but one feature doesn't, it's usually one of these.
 
 - Touch controls with a joystick, d-pad or arrow keys (pick in the settings panel). They hide while you use a controller.
 - Controllers (Xbox, PlayStation, MFi) work, including the inventory and pause buttons.
+- Rumble: on the controller when you're using one, otherwise the phone vibrates. The game's Controller Rumble setting turns it down or off.
 - A settings panel (the gear on the title screen) for touch controls, screen width (full width or 16:9 like PC), render scale and other performance options.
 - Automatic save backups in `SaveBackups/`, and an **Export saves** button that zips your saves to share or keep in iCloud.
 - Saves and mod files visible in the Files app.
@@ -220,6 +233,17 @@ After setup has finished and the IPA works, you can delete:
 - The Unity installer leftovers in `work/tools`, if any.
 
 Don't delete `work/ripped`. That's the project `./build` uses.
+
+## Getting port fixes
+
+When this repo gets fixes, pull them and run setup again. It doesn't rip the game again, it just updates your Unity project and rebuilds the IPA (about an hour the first time after an update):
+
+```
+git pull
+./setup
+```
+
+`./build` picks up fixes too, so if you only use modded builds you can just run that.
 
 ## Updating to a new game version
 
@@ -257,7 +281,8 @@ Delete `work-old` once the new one builds. Mods may need updating for a new game
 | `setup` | One-time setup: game files to Unity project to first IPA |
 | `build` | Builds an IPA with the mods in `BepInEx/` |
 | `port/` | The port itself: iPhone code, touch controls, editor build scripts, iOS plugins, art. Copied into the Unity project by setup. |
-| `tools/patch_game.py` | The small edits made to the game's own scripts (online features off, controller fixes, save location, screen width) |
+| `tools/patch_game.py` | The small edits made to the game's own scripts (online features off, controller fixes, rumble, save location, screen width) |
+| `tools/update_project.sh` | Brings an already set up project up to date with fixes in this repo (setup and build both run it) |
 | `tools/make_addressables_map.py` | Rebuilds the game's asset bundle layout for iOS from the PC game's catalog |
 | `tools/gen_shaders.py` | Replaces the empty shaders AssetRipper exports with working ones |
 | `tools/catdump`, `tools/bundledump` | Read the PC game's Addressables catalog and bundle contents |
