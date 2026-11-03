@@ -358,7 +358,7 @@
           "stars": 0,
           "forks": 0,
           "created": "2026-10-19T22:13:52Z",
-          "pushed": "2026-11-02T06:06:06Z",
+          "pushed": "2026-11-03T00:59:01Z",
           "branch": "main",
           "release": null,
           "readme": true,
@@ -991,6 +991,29 @@
       "icon": "spark",
       "projects": [
         {
+          "name": "sideport",
+          "title": "sideport",
+          "tagline": "Sideload IPAs onto your iPhone from a Mac and keep them refreshed",
+          "description": "Sideload IPAs onto your iPhone from a Mac and keep them refreshed",
+          "tags": [],
+          "url": "https://github.com/faarisaahmed/sideport",
+          "live": null,
+          "liveLabel": "Live site",
+          "links": [],
+          "language": "Swift",
+          "stars": 0,
+          "forks": 0,
+          "created": "2026-11-03T12:01:56Z",
+          "pushed": "2026-11-03T12:02:17Z",
+          "branch": "main",
+          "release": {
+            "tag": "v1.0.0",
+            "url": "https://github.com/faarisaahmed/sideport/releases/tag/v1.0.0"
+          },
+          "readme": true,
+          "shot": null
+        },
+        {
           "name": "silksong-ios-port",
           "title": "silksong-ios-port",
           "tagline": "Turn your PC copy of Hollow Knight: Silksong into a sideloadable iOS app, with BepInEx mods built in",
@@ -1004,7 +1027,7 @@
           "stars": 0,
           "forks": 0,
           "created": "2026-10-31T01:58:05Z",
-          "pushed": "2026-11-02T13:08:41Z",
+          "pushed": "2026-11-02T23:33:45Z",
           "branch": "main",
           "release": null,
           "readme": true,
