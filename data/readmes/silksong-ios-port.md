@@ -57,7 +57,7 @@ Once setup has finished you can get some back (see [Freeing up space](#freeing-u
 - Python 3 (comes with Xcode's command line tools)
 - [Homebrew](https://brew.sh) and `innoextract`, only if you use the GOG installer
 
-setup downloads the rest by itself: AssetRipper 2.0.0, the .NET 8 SDK (into `~/.dotnet`, no password needed), SteamCMD if you use Steam, and a couple of small helper tools.
+setup downloads the rest by itself: AssetRipper 2.0.0, the .NET 8 SDK (into `~/.dotnet`, no password needed), SteamCMD if you use Steam, UnityPy (to read the game's shaders) and a couple of small helper tools.
 
 ---
 
@@ -217,6 +217,7 @@ If a mod mostly works but one feature doesn't, it's usually one of these.
 ## Port features
 
 - Touch controls with a joystick, d-pad or arrow keys (pick in the settings panel). They hide while you use a controller.
+- Hold MENU + INV to edit the layout: drag buttons, resize them, change what they do or their shape, add and delete them. The HUD moves the same way, as one block or split into the masks, the spool and the rosary/shard counters.
 - Controllers (Xbox, PlayStation, Switch, Backbone and other MFi ones) work. The left menu button (View, Share/Create, minus, Select) opens the inventory and the right one (Menu, Options, plus, Start) pauses. iOS doesn't report the PlayStation touchpad click, so Share does the inventory there.
 - Rumble: on the controller when you're using one, otherwise the phone vibrates. The game's Controller Rumble setting turns it down or off.
 - A settings panel (the gear on the title screen) for touch controls, screen width (full width or 16:9 like PC), render scale and other performance options.
@@ -285,7 +286,8 @@ Delete `work-old` once the new one builds. Mods may need updating for a new game
 | `tools/patch_game.py` | The small edits made to the game's own scripts (online features off, controller fixes, rumble, save location, screen width) |
 | `tools/update_project.sh` | Brings an already set up project up to date with fixes in this repo (setup and build both run it) |
 | `tools/make_addressables_map.py` | Rebuilds the game's asset bundle layout for iOS from the PC game's catalog |
-| `tools/gen_shaders.py` | Replaces the empty shaders AssetRipper exports with working ones |
+| `tools/decompile_shaders.py` | Rebuilds the game's shaders from the PC version's compiled Direct3D code |
+| `tools/gen_shaders.py` | Replaces the empty shaders AssetRipper exports with the rebuilt ones (or approximations where it can't) |
 | `tools/catdump`, `tools/bundledump` | Read the PC game's Addressables catalog and bundle contents |
 | `tools/make_ipa.sh` | Compiles the Xcode project into an unsigned IPA |
 | `modding/` | The mod tool: `Weaver` runs at build time (BepInEx patchers, Harmony hook points), `ModRuntime` runs on the phone (plugin loader, Harmony replacement) |
@@ -299,6 +301,6 @@ Everything setup and build make goes in `work/` and `output/`, which git ignores
 - Hollow Knight: Silksong is made by Team Cherry. Buy it. This repo doesn't contain the game, and IPAs built with it contain your copy of the game, so don't share them.
 - [AssetRipper](https://github.com/AssetRipper/AssetRipper), [AddressablesTools](https://github.com/nesrak1/AddressablesTools) and [AssetsTools.NET](https://github.com/nesrak1/AssetsTools.NET) do the heavy lifting for reading the game.
 - `modding/vendor/core` contains [BepInEx](https://github.com/BepInEx/BepInEx) 5.4.23.2 (LGPL-2.1), [HarmonyX](https://github.com/BepInEx/HarmonyX) (MIT), [Mono.Cecil](https://github.com/jbevain/cecil) (MIT) and [MonoMod](https://github.com/MonoMod/MonoMod) (MIT), unchanged.
-- The free version of AssetRipper doesn't export shaders, so the ones here are approximations. A few effects (water, blur, heat haze) look simpler than on PC.
+- The free version of AssetRipper doesn't export shaders. setup rebuilds almost all of them from the PC game's compiled shader code instead; a few (bloom, blur, the tracking trail and some lit shaders) are still approximations. Projects set up before this keep the approximations until setup is run again on the PC files.
 
 Port by FaarisPorts.
