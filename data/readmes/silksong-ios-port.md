@@ -17,9 +17,9 @@ The rest of this file goes through everything step by step. If you've never done
 
 **Do I need the PC version?** Yes. Everything is built from the Windows files of Silksong (Steam or GOG), even if you only want to play on iPhone. The Switch, PlayStation or Xbox versions can't be used.
 
-**Can I add mods to an IPA someone else made?** No. Inside an IPA the game's code is already compiled for iPhone, so there's nothing left for mod DLLs to hook into. Mods have to be added while building, on a Mac that has done `./setup` with the PC game files. If you don't have a Mac, ask someone who has one set up to run `./build` with your `BepInEx` folder and send you the IPA.
+**Can I add mods to an IPA someone else made?** Only to a mod loader IPA (`./build --mod-loader`, see [Mod loader IPA](#mod-loader-ipa)). Normal IPAs have the game's code compiled for iPhone with nothing for mod DLLs to hook into, so mods have to be built in on a Mac with `./build`.
 
-**Can I drop mods into the Files app on my phone?** Not for code mods. iOS doesn't let apps load new code after they're installed. Mod settings (`.cfg`) and the files mods read (PNGs, sounds, text) can be changed on the phone, see [On the phone](#on-the-phone).
+**Can I drop mods into the Files app on my phone?** With a mod loader IPA, yes: put the mod's PC download in `BepInEx/plugins`, or use MODS on the title screen, then restart the game. With a normal IPA only mod settings (`.cfg`) and the files mods read (PNGs, sounds, text) can be changed on the phone, see [On the phone](#on-the-phone).
 
 **What do I need for a modded IPA, in short?** A Mac with Xcode, the PC game files, and the mods' normal PC (BepInEx 5) downloads in `BepInEx/plugins/`. Then `./setup` once and `./build` each time you change mods.
 
@@ -212,6 +212,26 @@ On PC, BepInEx loads mod DLLs while the game is running, and Harmony rewrites ga
 
 If a mod mostly works but one feature doesn't, it's usually one of these.
 
+### Mod loader IPA
+
+```
+./build --mod-loader          # writes output/Silksong-ModLoader.ipa
+```
+
+This builds an IPA with no mods in it that loads mods on the phone instead, so mods can be added without a Mac. It uses [HybridCLR](https://github.com/focus-creative-games/hybridclr) to run the mods' code, and every game method gets a hook point ahead of time so Harmony patches have something to attach to. It installs as its own app, **Silksong Mods** (bundle id `com.personal.silksong.mods`), next to the normal one. Use IMPORT SAVES in the settings panel to bring a save over.
+
+The first run needs an internet connection to download HybridCLR, and makes its own copy of the Unity project in `work-mods`. On a Mac's normal APFS disk that copy shares space with `work` until files in it change.
+
+On the phone:
+
+- **MODS** on the title screen lists the mods and whether each one loaded, turns them off and on, deletes them, and adds new ones: ADD MODS opens the Files picker, and takes a mod's `.dll` or its whole `.zip` from Thunderstore or Nexus. Mods load when the game starts, so quit (QUIT TO APPLY) and open it again after a change.
+- Or copy mods into **Files > Silksong Mods > BepInEx > plugins** yourself, unzipped like on PC. Turned off mods go to `BepInEx/disabled`.
+- Mods still need their dependencies. MODS shows what's missing ("needs Silksong.ModMenu...").
+- **FN** (top right, next to MAP) opens a bar of F1 to F12 keys for mod menus. Tap FN or the bar's X to close it. In the layout editor (MENU + INV) the bar can be moved, and dragging its left or right edge makes it narrower or wider; the keys wrap onto more rows when it's narrow. FN can be deleted or added back like any button.
+- Taps work as mouse clicks, so mod windows with buttons and sliders can be used directly.
+
+On top of the limits above, mods loaded this way can't patch Unity engine functions (like `AudioSource.Play` or `SpriteRenderer.sprite`) or constructors. Patches like that show up in `LogOutput.log` as "has no hook point" and are skipped. Mods built in with `./build` don't have the engine function limit.
+
 ---
 
 ## Port features
@@ -224,6 +244,7 @@ If a mod mostly works but one feature doesn't, it's usually one of these.
 - Automatic save backups in `SaveBackups/`, one file per save slot each time it changes (`Save 1 - 2026-11-04 19.30.dat`, the newest 15 kept), and an **Export saves** button that zips your saves to share or keep in iCloud.
 - **Import saves** (title screen settings panel) takes a zip from Export saves, or `user1.dat` to `user4.dat` from a PC or another phone. `userN.dat` and a backup (`Save N - <date>.dat`) go into slot N, a `.dat` with any other name goes into the first empty slot. Whatever was in those slots is backed up to `SaveBackups/` first.
 - Saves and mod files visible in the Files app.
+- Builds with mods get an FN button with F1-F12 keys for mod menus, and mod loader IPAs a MODS screen on the title screen (see [Mod loader IPA](#mod-loader-ipa)).
 - Runs at the screen's refresh rate instead of iOS's default 30 fps cap.
 
 ## Freeing up space
@@ -234,7 +255,7 @@ After setup has finished and the IPA works, you can delete:
 - `work/build/DerivedData` (about 6 GB). Xcode recreates it, the next build just takes a few minutes longer.
 - The Unity installer leftovers in `work/tools`, if any.
 
-Don't delete `work/ripped`. That's the project `./build` uses.
+Don't delete `work/ripped`. That's the project `./build` uses. `work-mods` is only for `./build --mod-loader`, and can be deleted if you don't make those; it's made again from `work` when needed. Its `build/XcodeSim-DerivedData` and `build/XcodeSim` can go any time.
 
 ## Getting port fixes
 
@@ -290,11 +311,11 @@ Delete `work-old` once the new one builds. Mods may need updating for a new game
 | `tools/gen_shaders.py` | Replaces the empty shaders AssetRipper exports with the rebuilt ones (or approximations where it can't) |
 | `tools/catdump`, `tools/bundledump` | Read the PC game's Addressables catalog and bundle contents |
 | `tools/make_ipa.sh` | Compiles the Xcode project into an unsigned IPA |
-| `modding/` | The mod tool: `Weaver` runs at build time (BepInEx patchers, Harmony hook points), `ModRuntime` runs on the phone (plugin loader, Harmony replacement) |
+| `modding/` | The mod tool: `Weaver` runs at build time (BepInEx patchers, Harmony hook points), `ModRuntime` runs on the phone (plugin loader, Harmony replacement, the mod loader's DLL loading), `Shared` is the iOS fixes made to mod DLLs, used by both |
 | `scripts/sim.sh` | Runs a build in the iOS Simulator |
 | `BepInEx/` | Put your mods here |
 
-Everything setup and build make goes in `work/` and `output/`, which git ignores.
+Everything setup and build make goes in `work/` (and `work-mods/` for the mod loader) and `output/`, which git ignores.
 
 ## Credits and notes
 
